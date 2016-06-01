@@ -1,0 +1,899 @@
+@charset "UTF-8";
+/* color区域 co+首三位位 */
+$coff8 : #ff8a00;
+$cof8f : #f8f8f8;
+$cofff : #ffffff;
+$cod3d : #d3d3d3;
+$co585 : #585858;
+$co888 : #888888;
+$cof89 : #f897ae;
+$co555 : #555555;
+$cof27 : #f27200;
+$coffb : #ffb1c5;
+$coe8e : #e8e8e8;
+$coccc : #ccc;
+$codfd : #dfdfdf;
+$coeee : #eee;
+/* 大小区域size开头 */
+$si1: 1rem;
+$si2: 2rem;
+$sipe100: 100%;
+$sipe80: 80%;
+
+body,html{
+	width: $sipe100;
+	height: $sipe100;
+	font-size: $sipe100;
+  overflow-x:hidden; 
+}
+
+// mixin区域
+@mixin blocen($size:0){
+    margin: $size auto;
+}
+@mixin borde($color,$style:null,$size:null){
+  $style : solid !default;
+  $size : 1px !default;
+  border: $color $style $size;
+}
+@mixin borTB($color){
+  border-top: $color solid 1px;
+  border-bottom: $color solid 1px;
+}
+
+@mixin borad($size){
+	$size: 0 !default;
+	-webkit-border-radius: $size;
+	-moz-border-radius: $size;
+	-mz-border-radius: $size;
+	-o-border-radius: $size;
+	border-radius: $size;
+}
+
+@mixin poce($w,$h,$size:$sipe100){
+	position: relative;
+    width:$w;
+    height:$h;
+    @include borad($size);  
+	img{
+		position: absolute;
+		max-width: $sipe100;
+		max-height: $sipe100;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+        @include borad($size);   
+	}
+}
+@mixin textHidden($width){
+          width: $width;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          word-break:keep-all;
+          white-space:nowrap;
+}
+/* 公共调用区域 */
+.fontnormal{
+	font-weight: normal;
+}
+.ulno{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.bono{
+  border:none;
+}
+.clear{
+    zoom: 1; 
+}
+.clear:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+.cof27{
+  color: $cof27 !important;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.dl-inline{
+  display: inline-block;
+  dt{
+    display: inline-block;
+  }
+  dd{
+    display: inline-block;
+  }
+}
+.bgf8{
+	background:$cof8f;
+}
+.centerTitle{
+     background: $cofff;
+     @include borTB(#eee);
+     font-size: 1.3rem;
+     padding:$si1;
+     text-align: center;
+     display: block;
+     width: 100%;
+     color: $co585;
+}
+.leftTitle{
+        color: $co585;
+        font-size: 1.4rem;
+        padding:$si1;
+        font-weight: normal;
+        border-bottom: #eee solid 1px;
+}
+.aono a{
+  text-decoration: none;
+   outline: none;
+  &:visited,&:active,&:hover{
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.mob3d{
+  transform:translate3d(0,0,0);
+  -webkit-transform:translate3d(0,0,0);
+  -o-transform:translate3d(0,0,0);
+  -moz-transform:translate3d(0,0,0);
+}
+.text-justify{
+  text-align-last: justify !important;
+  -moz-text-align-last: justify !important;
+  text-align: justify !important;
+}
+.xing{
+     &.one{
+      i:first-child{
+         color:$cof27;
+      }
+     }
+     &.two{
+      i:nth-child(-n+2){
+         color:$cof27;
+      }
+     }
+     &.three{
+      i:nth-child(-n+3){
+         color:$cof27;
+      }
+     }
+     &.four{
+      i:nth-child(-n+4){
+         color:$cof27;
+      }
+     }
+     &.five{
+      i{
+         color:$cof27;
+      }
+     }
+     i{
+        color: #d3d3d3;
+      font-size: 1rem;
+      }
+}
+.public-section{
+  margin:1.5rem 0.5rem 2rem;
+  @extend .clear;     
+}
+.formInput{
+        background: $cofff;
+        color:$co888;
+        font-size: 1.2rem;
+        border:$coeee solid 1px;
+        height: 3rem;
+        padding:0 0.5rem;
+        margin-bottom: 0.5rem;
+}
+/* 上面是公用样式 */
+
+.user{
+	background: $coff8;
+	.con{
+	  @include 	blocen;
+      width:$sipe80;
+      padding:1.5rem 0 $si2 0;
+      .user-tx{
+      	border:0.3rem solid #fff;
+        display:block;
+        float: left;
+      	@include poce(5rem,5rem);
+      }
+      .user-info{
+      	 display:block;
+      	 margin: 1rem 1.5rem;
+      	 float: left;
+      	 overflow: hidden;
+      	 .name,.tel{
+           color: $cofff;
+           font-size: 1.2rem;
+           @extend .fontnormal;          
+      	 }
+      	 .name{
+      	 	font-size: 1.4rem;
+      	 padding:0.3rem 0 0.7rem 0;
+      	 }
+      }
+	}
+}
+
+.user-con{
+  ul{
+    @extend .ulno;
+    background: $cofff;
+    @include borTB(#eee);
+    margin-top:1rem;
+    @extend .clear;
+    li{
+        border-bottom: $cod3d solid 1px;
+        @extend .clear;
+        &:last-child{
+          @extend .bono;
+        }
+        a{
+          display: block;
+          width: 100%;     
+          color: $co585;
+          padding:0.8rem $si1;
+           @extend .clear;
+           .left,.center,.right{
+            display:inline-block;
+            vertical-align: middle;
+            font-size: 1.3rem;
+           }
+           .left{
+             width: 2.5rem;
+             height: 2.5rem;
+             img{
+              max-width: 100%;
+              max-height: 100%;
+             }
+           }
+           .center{
+              padding-left: 0.4rem;
+              width: 75%;
+           }
+           @media screen and (max-width: 350px){
+             .center{
+              width:70%;
+             }
+           }
+           .right{
+             text-align: right;
+             vertical-align: 0px;
+           }
+        } 
+
+    }
+  }
+  .footer{
+     @extend .centerTitle;
+     margin-top:1rem;
+  }
+}
+/* 个人中心首页结束 */
+.order-head{
+    position: relative;
+    @extend .centerTitle;
+    i{
+      font-size: 1.6rem;
+      border:none;
+      margin-left: 4px;
+      vertical-align: -1px;
+    }
+    ul{
+      @extend .ulno;
+      display: none;
+      @extend .aono;
+      position: absolute;
+      top:100%;
+      background: #fff;
+      width: 100%;
+      left:0;
+      text-align: left;
+      li{
+        padding:0.8rem $si1;
+        border-bottom: #eee solid 1px;
+
+        a{
+          font-size: 1rem;
+          color: $co585;
+        }
+      }
+    }
+}
+.order-con{
+  ul{
+    @extend .ulno;
+    li{
+      background: $cofff;
+      margin-top: 1rem;
+      @include borTB(#eee);
+      @extend .clear;
+      .title{
+       @extend .leftTitle;
+      }
+      .left{
+        padding:$si1 0.5rem;
+        width: 30%;
+        @extend .fl;
+        .img{
+          height:6rem;         
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+        }
+      }
+      .right{
+         padding:$si1 0.5rem;
+        width: 70%;
+        @extend .fr;
+        h2{
+          color: $co585;
+          font-size: 1.4rem;
+          font-weight: normal;
+          @include textHidden(90%);
+          padding-top: 1rem;
+          span{
+            color: $co888;
+            font-size: 1rem;
+            padding-left: 1rem
+          }
+        }
+        dl{
+          padding-top:0.8rem;
+          color: $co888; 
+        }
+      }
+    }
+  }
+}
+/* 我的订单结束 */
+.address{
+ .title{
+   @extend .leftTitle;
+   padding:1.2rem $si1 0.6rem $si1;
+   color: $co888;
+   background: $cofff;
+   border-bottom: $cod3d solid 1px;
+ }
+ ul{
+  @extend .ulno;
+  background: $cofff;
+  li{
+    @extend .leftTitle;
+    a{
+      color: $co585;
+    }
+  } 
+ }
+ .centerTitle{
+   margin-top: 1rem;
+ }
+}
+/* 个人中心-地址管理结束 */
+.appoin-head{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  @extend .mob3d;
+  ul{
+    @extend .ulno;
+    width: 600%;
+    @extend .clear;
+    height: 100%;
+    @extend .mob3d;
+       -webkit-transition: all 0.5s 0s ease-in-out;
+    li{
+      @extend .mob3d;
+     a{
+      display: block;
+      width: 100%;
+       img{
+        max-width: 100%;
+        max-height: 100%;
+       }
+     }
+     @extend .fl;     
+    }
+  }
+  ol{
+    @extend .ulno;
+    position: absolute;
+    left:50%;
+    bottom:0.7rem;
+    li{
+         width: 0.7rem;
+         height: 0.7rem;
+         background: $cofff;
+         display: inline-block;
+         margin:0 0.2rem;
+         @include borad(100%);
+         &.active{
+          background: $cof89;
+         }
+    }
+  }
+}
+.appoin-nav{
+   ul{
+     @extend .ulno;
+     @extend .clear;
+     padding:1.5rem 3%;
+     li{
+      padding:1.3rem 0.8rem;
+      background: $cofff;
+      margin:0 2% 2% 0;
+      width:49%;
+       @extend .fl;
+       &:nth-child(2n){
+        margin-right:0;
+       }
+      .img{
+        width: 3rem;
+        height: 3rem;
+        display: inline-block;
+        vertical-align: middle;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      } 
+      .text{
+        display: inline-block;
+        color: $co585;
+        font-size: 1.2rem;
+        text-indent: 0.3rem;
+      }
+     }
+   }
+}
+.appoin-section{
+  .info{
+      width: 100%;
+      display: block;
+      color: $co888;
+      margin-top: 0.8rem;
+      line-height: 1.2rem;
+    }
+  .tj{
+    background: url('../img/xian.png') no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    color: $co555;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  ul{
+    @extend .ulno;
+    padding:0 3%;
+    &>li{
+       border:$coe8e solid 1px;
+      background: $cofff;
+      margin-top: 1rem;
+      @include borTB(#eee);
+      @extend .clear;
+      .title{
+       @extend .leftTitle;
+      }
+      .left{
+        padding: 0.5rem;
+        width: 35%;
+        @extend .fl;
+        .img{
+          height:6rem;         
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+        }
+      }
+      .right{
+         padding:0.5rem;
+        width: 65%;
+        @extend .fr;
+        h2{
+          color: $co585;
+          font-size: 1.4rem;
+          font-weight: normal;
+          @include textHidden(90%);
+          padding-top: 0.5rem;
+          span{
+            color: $co888;
+            font-size: 1rem;
+            padding-left: 1rem
+          }
+        }
+        dl{
+          padding-top:0.8rem;
+          color: $co888; 
+          dt{
+            color: $cof27;
+          }
+          dd.xing{
+            color: $co888;
+            font-size: 1rem;
+          }
+        }
+        .tip{
+          padding-bottom: 0.5rem;
+          @extend .ulno;
+          li{           
+              margin:0.5rem 0.2rem 0 0;
+              display: inline-block;
+            a{
+              background:$coffb;
+               padding:2px 2px;
+              color: $cofff;  
+              @include borad(4px);
+              font-size: 1rem;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.appoin-search{
+  width: 100%;
+  padding:1.4rem 3% 0;
+  form.search{
+    .form-group{
+      font-size: 0;
+      input{
+         border:#eee solid 1px;
+         padding:6px 12px;
+         width: 80%;
+         height: 2.5rem;  
+         display: inline-block;
+         font-size: 1.2rem;
+         font-weight: normal;
+         vertical-align: middle;
+      }
+      button{
+        width: 20%;
+         border:#eee solid 1px;
+         background: #fff;
+         vertical-align: middle;
+         font-size: 1.2rem;
+          display: inline-block;
+         height: 2.5rem;
+         border-left: none;
+      }
+    }
+  }
+}
+/* 上面是保姆预约 */
+.appoinList-nav{
+  ul.ul{
+    @extend .clear;
+    @extend .ulno;
+    background: $cofff;
+    width: 100%;
+    padding:1rem 0;
+    position:relative;
+    &>li{
+      display: inline-block;
+      text-align: center;
+      font-size: 1.4rem;
+      width: 20%;
+      float: left;
+      border-right: $coccc solid 1px;
+      &:last-child{
+        border:none;
+      }
+      i{
+          font-size: 0.8rem;
+        }
+      &>ol{
+      @extend .ulno;
+      display: none;
+      @extend .aono;
+      position: absolute;
+      top:100%;
+      background: #fff;
+      width: 100%;
+      left:0;
+      text-align: left;
+      li{
+        padding:0.8rem $si1;
+        border-bottom: #eee solid 1px;
+        a{
+          font-size: 1rem;
+          color: $co585;
+        }
+      }
+    }
+    }
+  }
+}
+/* 上面是列表页 */
+.appoin-article{
+  margin:0.5rem;
+  background: $cofff;
+  @extend .clear;
+  border:$coeee solid 1px;
+  .left{
+        @extend .fl;        
+        width: 40%;
+        text-align: center;
+        margin:0.8rem 0 1rem 0.4rem;
+        display: inline-block;
+        @include poce(7rem,7rem);
+        border:0.3rem solid $codfd;
+  }
+  .right{
+     @extend .fl;
+     width: 60%;
+     height: 7rem;
+     margin:2rem 0 0 0.6rem;
+     .number{
+      color: #1b5d9b;
+      font-size: 1rem;
+     }
+     h3{
+      font-size: 1.4rem;
+      color: $co585;
+      font-weight: normal;
+      margin:1rem 0 1rem 0;
+      span{
+            color: $co888;
+            font-size: 1rem;
+            padding-left: 1rem
+      }
+     }
+     dl{
+      dt{
+        font-size: 1.2rem;
+        color: $cof27;
+      }
+     }
+  }
+}
+.appoinArt-con{
+  margin:1rem 0.5rem;
+    h2.tj{
+    background: url('../img/xian.png') no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    color: $co555;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  section{
+    @extend .clear;
+    margin:2rem 0;
+  }
+  section.one{
+  .tip{
+          padding:0 1rem;
+          @extend .ulno;
+          li{           
+              margin:1rem 0.4rem 0 0;
+              display: inline-block;
+            a{
+              background:$coffb;
+               padding:3px 5px;
+              color: $cofff;  
+              @include borad(4px);
+              font-size: 1rem;
+
+            }
+          }
+        }
+  }
+  section.two{
+    .tj{
+      margin-bottom: 1rem;
+    }
+      padding:0 1rem;
+      p{
+        color: $co888;
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+  }
+section.three{
+    .tj{
+      margin-bottom: 1rem;
+    }
+    padding:0 1rem;
+    ul{
+      @extend .clear;
+      li{
+         @extend .fl;
+         width: 22%;
+         margin-right: 2%;
+         img{
+          max-width: 100%;
+         }
+         &:last-child{
+          margin-right: 0;
+         }
+      }
+    }  
+  }
+}
+.appoin-article-f{
+  .public-sub{
+    width: 48%;
+    &:first-child{
+      margin-right:2%;
+    }
+  }
+}
+
+/* // 上面是保姆预约详情页 */
+.appoin-order-top{
+ margin:1rem 0.5rem;
+ padding:1.5rem 1rem;
+  background:#fff;
+  .dl-inline{
+    width: 100%;
+    padding: 0 0 1rem 0;
+    dt{
+      width:6rem;
+      color:$co585;
+      font-size:1.4rem;
+      letter-spacing: 0.1rem;
+    }
+    dd{
+      font-size: 1rem;
+      color:$co888;
+      &.cof27{
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.appoin-form{
+  .form-group{
+    width: 100%;
+     @extend .clear;
+     .select{
+      width: 48%;
+       @extend .formInput;
+      &:first-child{
+        float:left;
+      }
+      &:nth-child(2){
+        float: right;
+      }
+     }
+     .input{
+        width: 100%;
+        @extend .formInput;
+        height: 2.4rem;
+
+        padding:1.6rem 0.5rem 1.4rem 0.5rem;
+     }
+  }
+  .public-h2{
+    font-size: 1.4rem;
+    color: $co585;
+    font-weight: normal;
+    padding:0.5rem;
+  }
+  .pay-label{
+    &.active{
+      i{
+        color: #666;
+      }
+    }
+        width:100%;
+        display: block;
+        background: $cofff;
+        padding:1rem 1.2rem;
+        border-bottom: $coeee solid 1px;
+        &:last-child{
+          border:none;
+        }
+        .img{
+            width: 20%;
+            display: inline-block;
+        }
+        img{
+         display: inline-block;
+          height: 1.3rem;
+          max-width: 100%;
+          vertical-align: middle;
+          margin-right: 1rem;
+        }
+        input[type='checkbox']{
+          display: none;
+        }
+        i{
+          width: 1rem;
+          height:1rem;
+          font-size: 0.8rem;
+          line-height: 1rem;
+          text-align: center;
+          display: inline-block;
+          border:#c7c5c5 solid 1px;
+          color: $cofff;
+        }
+        .text{
+           color: #8b8b8b;
+           width: 70%;
+           font-size: 1.2rem;
+           display: inline-block;
+        }
+
+  }
+  .pay{
+          font-size: 1.4rem;
+          padding:0.6rem 0 0.8rem 0.5rem;
+          display: inline-block;
+        }
+}
+.public-sub{
+background: $cof27;
+border:none;
+width: 100%;
+padding:1rem 0;
+font-size: 1.4rem;
+color: $cofff;
+}
+
+/* 上面是保姆预约界面 */
+.baby-partList-nav{
+  ul.ul{
+    @extend .clear;
+    @extend .ulno;
+    background: $cofff;
+    width: 100%;
+    padding:1rem 0;
+    position:relative;
+    &>li{
+      display: inline-block;
+      text-align: center;
+      font-size: 1.4rem;
+      width: 25%;
+      float: left;
+      border-right: $coccc solid 1px;
+      &:last-child{
+        border:none;
+      }
+
+      i{
+          font-size: 0.8rem;
+        }
+      &>ol{
+      @extend .ulno;
+      display: none;
+      @extend .aono;
+      position: absolute;
+      top:100%;
+      background: #fff;
+      width: 100%;
+      left:0;
+      text-align: left;
+      li{
+        padding:0.8rem $si1;
+        border-bottom: #eee solid 1px;
+        a{
+          font-size: 1rem;
+          color: $co585;
+        }
+      }
+    }
+    }
+  }
+}

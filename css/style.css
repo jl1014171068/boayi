@@ -1,0 +1,665 @@
+@charset "UTF-8";
+/* color区域 co+首三位位 */
+/* 大小区域size开头 */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  overflow-x: hidden; }
+
+/* 公共调用区域 */
+.fontnormal, .user .con .user-info .name, .user .con .user-info .tel {
+  font-weight: normal; }
+
+.ulno, .user-con ul, .order-head ul, .order-con ul, .address ul, .appoin-head ul, .appoin-head ol, .appoin-nav ul, .appoin-section ul, .appoin-section ul > li .right .tip, .appoinList-nav ul.ul, .appoinList-nav ul.ul > li > ol, .appoinArt-con section.one .tip, .baby-partList-nav ul.ul, .baby-partList-nav ul.ul > li > ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.bono, .user-con ul li:last-child {
+  border: none; }
+
+.clear, .public-section, .user-con ul, .user-con ul li, .user-con ul li a, .order-con ul li, .appoin-head ul, .appoin-nav ul, .appoin-section ul > li, .appoinList-nav ul.ul, .appoin-article, .appoinArt-con section, .appoinArt-con section.three ul, .appoin-form .form-group, .baby-partList-nav ul.ul {
+  zoom: 1; }
+
+.clear:after, .public-section:after, .user-con ul:after, .user-con ul li:after, .user-con ul li a:after, .order-con ul li:after, .appoin-head ul:after, .appoin-nav ul:after, .appoin-section ul > li:after, .appoinList-nav ul.ul:after, .appoin-article:after, .appoinArt-con section:after, .appoinArt-con section.three ul:after, .appoin-form .form-group:after, .baby-partList-nav ul.ul:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.cof27 {
+  color: #f27200 !important; }
+
+.fl, .order-con ul li .left, .appoin-head ul li, .appoin-nav ul li, .appoin-section ul > li .left, .appoin-article .left, .appoin-article .right, .appoinArt-con section.three ul li {
+  float: left; }
+
+.fr, .order-con ul li .right, .appoin-section ul > li .right {
+  float: right; }
+
+.dl-inline {
+  display: inline-block; }
+  .dl-inline dt {
+    display: inline-block; }
+  .dl-inline dd {
+    display: inline-block; }
+
+.bgf8 {
+  background: #f8f8f8; }
+
+.centerTitle, .user-con .footer, .order-head {
+  background: #ffffff;
+  border-top: #eee solid 1px;
+  border-bottom: #eee solid 1px;
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #585858; }
+
+.leftTitle, .order-con ul li .title, .address .title, .address ul li, .appoin-section ul > li .title {
+  color: #585858;
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-weight: normal;
+  border-bottom: #eee solid 1px; }
+
+.aono a, .order-head ul a, .appoinList-nav ul.ul > li > ol a, .baby-partList-nav ul.ul > li > ol a {
+  text-decoration: none;
+  outline: none; }
+  .aono a:visited, .order-head ul a:visited, .appoinList-nav ul.ul > li > ol a:visited, .baby-partList-nav ul.ul > li > ol a:visited, .aono a:active, .order-head ul a:active, .appoinList-nav ul.ul > li > ol a:active, .baby-partList-nav ul.ul > li > ol a:active, .aono a:hover, .order-head ul a:hover, .appoinList-nav ul.ul > li > ol a:hover, .baby-partList-nav ul.ul > li > ol a:hover {
+    text-decoration: none;
+    outline: none; }
+
+.mob3d, .appoin-head, .appoin-head ul, .appoin-head ul li {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0); }
+
+.text-justify {
+  text-align-last: justify !important;
+  -moz-text-align-last: justify !important;
+  text-align: justify !important; }
+
+.xing.one i:first-child {
+  color: #f27200; }
+.xing.two i:nth-child(-n+2) {
+  color: #f27200; }
+.xing.three i:nth-child(-n+3) {
+  color: #f27200; }
+.xing.four i:nth-child(-n+4) {
+  color: #f27200; }
+.xing.five i {
+  color: #f27200; }
+.xing i {
+  color: #d3d3d3;
+  font-size: 1rem; }
+
+.public-section {
+  margin: 1.5rem 0.5rem 2rem; }
+
+.formInput, .appoin-form .form-group .select, .appoin-form .form-group .input {
+  background: #ffffff;
+  color: #888888;
+  font-size: 1.2rem;
+  border: #eee solid 1px;
+  height: 3rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem; }
+
+/* 上面是公用样式 */
+.user {
+  background: #ff8a00; }
+  .user .con {
+    margin: 0 auto;
+    width: 80%;
+    padding: 1.5rem 0 2rem 0; }
+    .user .con .user-tx {
+      border: 0.3rem solid #fff;
+      display: block;
+      float: left;
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -mz-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%; }
+      .user .con .user-tx img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -mz-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%; }
+    .user .con .user-info {
+      display: block;
+      margin: 1rem 1.5rem;
+      float: left;
+      overflow: hidden; }
+      .user .con .user-info .name, .user .con .user-info .tel {
+        color: #ffffff;
+        font-size: 1.2rem; }
+      .user .con .user-info .name {
+        font-size: 1.4rem;
+        padding: 0.3rem 0 0.7rem 0; }
+
+.user-con ul {
+  background: #ffffff;
+  border-top: #eee solid 1px;
+  border-bottom: #eee solid 1px;
+  margin-top: 1rem; }
+  .user-con ul li {
+    border-bottom: #d3d3d3 solid 1px; }
+    .user-con ul li a {
+      display: block;
+      width: 100%;
+      color: #585858;
+      padding: 0.8rem 1rem; }
+      .user-con ul li a .left, .user-con ul li a .center, .user-con ul li a .right {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.3rem; }
+      .user-con ul li a .left {
+        width: 2.5rem;
+        height: 2.5rem; }
+        .user-con ul li a .left img {
+          max-width: 100%;
+          max-height: 100%; }
+      .user-con ul li a .center {
+        padding-left: 0.4rem;
+        width: 75%; }
+      @media screen and (max-width: 350px) {
+        .user-con ul li a .center {
+          width: 70%; } }
+      .user-con ul li a .right {
+        text-align: right;
+        vertical-align: 0px; }
+.user-con .footer {
+  margin-top: 1rem; }
+
+/* 个人中心首页结束 */
+.order-head {
+  position: relative; }
+  .order-head i {
+    font-size: 1.6rem;
+    border: none;
+    margin-left: 4px;
+    vertical-align: -1px; }
+  .order-head ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    text-align: left; }
+    .order-head ul li {
+      padding: 0.8rem 1rem;
+      border-bottom: #eee solid 1px; }
+      .order-head ul li a {
+        font-size: 1rem;
+        color: #585858; }
+
+.order-con ul li {
+  background: #ffffff;
+  margin-top: 1rem;
+  border-top: #eee solid 1px;
+  border-bottom: #eee solid 1px; }
+  .order-con ul li .left {
+    padding: 1rem 0.5rem;
+    width: 30%; }
+    .order-con ul li .left .img {
+      height: 6rem; }
+      .order-con ul li .left .img img {
+        max-width: 100%;
+        max-height: 100%; }
+  .order-con ul li .right {
+    padding: 1rem 0.5rem;
+    width: 70%; }
+    .order-con ul li .right h2 {
+      color: #585858;
+      font-size: 1.4rem;
+      font-weight: normal;
+      width: 90%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap;
+      padding-top: 1rem; }
+      .order-con ul li .right h2 span {
+        color: #888888;
+        font-size: 1rem;
+        padding-left: 1rem; }
+    .order-con ul li .right dl {
+      padding-top: 0.8rem;
+      color: #888888; }
+
+/* 我的订单结束 */
+.address .title {
+  padding: 1.2rem 1rem 0.6rem 1rem;
+  color: #888888;
+  background: #ffffff;
+  border-bottom: #d3d3d3 solid 1px; }
+.address ul {
+  background: #ffffff; }
+  .address ul li a {
+    color: #585858; }
+.address .centerTitle, .address .user-con .footer, .user-con .address .footer, .address .order-head {
+  margin-top: 1rem; }
+
+/* 个人中心-地址管理结束 */
+.appoin-head {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .appoin-head ul {
+    width: 600%;
+    height: 100%;
+    -webkit-transition: all 0.5s 0s ease-in-out; }
+    .appoin-head ul li a {
+      display: block;
+      width: 100%; }
+      .appoin-head ul li a img {
+        max-width: 100%;
+        max-height: 100%; }
+  .appoin-head ol {
+    position: absolute;
+    left: 50%;
+    bottom: 0.7rem; }
+    .appoin-head ol li {
+      width: 0.7rem;
+      height: 0.7rem;
+      background: #ffffff;
+      display: inline-block;
+      margin: 0 0.2rem;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -mz-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%; }
+      .appoin-head ol li.active {
+        background: #f897ae; }
+
+.appoin-nav ul {
+  padding: 1.5rem 3%; }
+  .appoin-nav ul li {
+    padding: 1.3rem 0.8rem;
+    background: #ffffff;
+    margin: 0 2% 2% 0;
+    width: 49%; }
+    .appoin-nav ul li:nth-child(2n) {
+      margin-right: 0; }
+    .appoin-nav ul li .img {
+      width: 3rem;
+      height: 3rem;
+      display: inline-block;
+      vertical-align: middle; }
+      .appoin-nav ul li .img img {
+        max-width: 100%;
+        max-height: 100%; }
+    .appoin-nav ul li .text {
+      display: inline-block;
+      color: #585858;
+      font-size: 1.2rem;
+      text-indent: 0.3rem; }
+
+.appoin-section .info {
+  width: 100%;
+  display: block;
+  color: #888888;
+  margin-top: 0.8rem;
+  line-height: 1.2rem; }
+.appoin-section .tj {
+  background: url("../img/xian.png") no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  text-align: center;
+  color: #555555;
+  font-size: 1.4rem;
+  font-weight: normal; }
+.appoin-section ul {
+  padding: 0 3%; }
+  .appoin-section ul > li {
+    border: #e8e8e8 solid 1px;
+    background: #ffffff;
+    margin-top: 1rem;
+    border-top: #eee solid 1px;
+    border-bottom: #eee solid 1px; }
+    .appoin-section ul > li .left {
+      padding: 0.5rem;
+      width: 35%; }
+      .appoin-section ul > li .left .img {
+        height: 6rem; }
+        .appoin-section ul > li .left .img img {
+          max-width: 100%;
+          max-height: 100%; }
+    .appoin-section ul > li .right {
+      padding: 0.5rem;
+      width: 65%; }
+      .appoin-section ul > li .right h2 {
+        color: #585858;
+        font-size: 1.4rem;
+        font-weight: normal;
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: keep-all;
+        white-space: nowrap;
+        padding-top: 0.5rem; }
+        .appoin-section ul > li .right h2 span {
+          color: #888888;
+          font-size: 1rem;
+          padding-left: 1rem; }
+      .appoin-section ul > li .right dl {
+        padding-top: 0.8rem;
+        color: #888888; }
+        .appoin-section ul > li .right dl dt {
+          color: #f27200; }
+        .appoin-section ul > li .right dl dd.xing {
+          color: #888888;
+          font-size: 1rem; }
+      .appoin-section ul > li .right .tip {
+        padding-bottom: 0.5rem; }
+        .appoin-section ul > li .right .tip li {
+          margin: 0.5rem 0.2rem 0 0;
+          display: inline-block; }
+          .appoin-section ul > li .right .tip li a {
+            background: #ffb1c5;
+            padding: 2px 2px;
+            color: #ffffff;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -mz-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 1rem; }
+
+.appoin-search {
+  width: 100%;
+  padding: 1.4rem 3% 0; }
+  .appoin-search form.search .form-group {
+    font-size: 0; }
+    .appoin-search form.search .form-group input {
+      border: #eee solid 1px;
+      padding: 6px 12px;
+      width: 80%;
+      height: 2.5rem;
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: normal;
+      vertical-align: middle; }
+    .appoin-search form.search .form-group button {
+      width: 20%;
+      border: #eee solid 1px;
+      background: #fff;
+      vertical-align: middle;
+      font-size: 1.2rem;
+      display: inline-block;
+      height: 2.5rem;
+      border-left: none; }
+
+/* 上面是保姆预约 */
+.appoinList-nav ul.ul {
+  background: #ffffff;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative; }
+  .appoinList-nav ul.ul > li {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 20%;
+    float: left;
+    border-right: #ccc solid 1px; }
+    .appoinList-nav ul.ul > li:last-child {
+      border: none; }
+    .appoinList-nav ul.ul > li i {
+      font-size: 0.8rem; }
+    .appoinList-nav ul.ul > li > ol {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background: #fff;
+      width: 100%;
+      left: 0;
+      text-align: left; }
+      .appoinList-nav ul.ul > li > ol li {
+        padding: 0.8rem 1rem;
+        border-bottom: #eee solid 1px; }
+        .appoinList-nav ul.ul > li > ol li a {
+          font-size: 1rem;
+          color: #585858; }
+
+/* 上面是列表页 */
+.appoin-article {
+  margin: 0.5rem;
+  background: #ffffff;
+  border: #eee solid 1px; }
+  .appoin-article .left {
+    width: 40%;
+    text-align: center;
+    margin: 0.8rem 0 1rem 0.4rem;
+    display: inline-block;
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -mz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    border: 0.3rem solid #dfdfdf; }
+    .appoin-article .left img {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -mz-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%; }
+  .appoin-article .right {
+    width: 60%;
+    height: 7rem;
+    margin: 2rem 0 0 0.6rem; }
+    .appoin-article .right .number {
+      color: #1b5d9b;
+      font-size: 1rem; }
+    .appoin-article .right h3 {
+      font-size: 1.4rem;
+      color: #585858;
+      font-weight: normal;
+      margin: 1rem 0 1rem 0; }
+      .appoin-article .right h3 span {
+        color: #888888;
+        font-size: 1rem;
+        padding-left: 1rem; }
+    .appoin-article .right dl dt {
+      font-size: 1.2rem;
+      color: #f27200; }
+
+.appoinArt-con {
+  margin: 1rem 0.5rem; }
+  .appoinArt-con h2.tj {
+    background: url("../img/xian.png") no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    color: #555555;
+    font-size: 1.4rem;
+    font-weight: normal; }
+  .appoinArt-con section {
+    margin: 2rem 0; }
+  .appoinArt-con section.one .tip {
+    padding: 0 1rem; }
+    .appoinArt-con section.one .tip li {
+      margin: 1rem 0.4rem 0 0;
+      display: inline-block; }
+      .appoinArt-con section.one .tip li a {
+        background: #ffb1c5;
+        padding: 3px 5px;
+        color: #ffffff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -mz-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px;
+        font-size: 1rem; }
+  .appoinArt-con section.two {
+    padding: 0 1rem; }
+    .appoinArt-con section.two .tj {
+      margin-bottom: 1rem; }
+    .appoinArt-con section.two p {
+      color: #888888;
+      font-size: 1.2rem;
+      line-height: 1.3; }
+  .appoinArt-con section.three {
+    padding: 0 1rem; }
+    .appoinArt-con section.three .tj {
+      margin-bottom: 1rem; }
+    .appoinArt-con section.three ul li {
+      width: 22%;
+      margin-right: 2%; }
+      .appoinArt-con section.three ul li img {
+        max-width: 100%; }
+      .appoinArt-con section.three ul li:last-child {
+        margin-right: 0; }
+
+.appoin-article-f .public-sub {
+  width: 48%; }
+  .appoin-article-f .public-sub:first-child {
+    margin-right: 2%; }
+
+/* // 上面是保姆预约详情页 */
+.appoin-order-top {
+  margin: 1rem 0.5rem;
+  padding: 1.5rem 1rem;
+  background: #fff; }
+  .appoin-order-top .dl-inline {
+    width: 100%;
+    padding: 0 0 1rem 0; }
+    .appoin-order-top .dl-inline dt {
+      width: 6rem;
+      color: #585858;
+      font-size: 1.4rem;
+      letter-spacing: 0.1rem; }
+    .appoin-order-top .dl-inline dd {
+      font-size: 1rem;
+      color: #888888; }
+      .appoin-order-top .dl-inline dd.cof27 {
+        font-size: 1.2rem;
+        font-weight: 600; }
+
+.appoin-form .form-group {
+  width: 100%; }
+  .appoin-form .form-group .select {
+    width: 48%; }
+    .appoin-form .form-group .select:first-child {
+      float: left; }
+    .appoin-form .form-group .select:nth-child(2) {
+      float: right; }
+  .appoin-form .form-group .input {
+    width: 100%;
+    height: 2.4rem;
+    padding: 1.6rem 0.5rem 1.4rem 0.5rem; }
+.appoin-form .public-h2 {
+  font-size: 1.4rem;
+  color: #585858;
+  font-weight: normal;
+  padding: 0.5rem; }
+.appoin-form .pay-label {
+  width: 100%;
+  display: block;
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+  border-bottom: #eee solid 1px; }
+  .appoin-form .pay-label.active i {
+    color: #666; }
+  .appoin-form .pay-label:last-child {
+    border: none; }
+  .appoin-form .pay-label .img {
+    width: 20%;
+    display: inline-block; }
+  .appoin-form .pay-label img {
+    display: inline-block;
+    height: 1.3rem;
+    max-width: 100%;
+    vertical-align: middle;
+    margin-right: 1rem; }
+  .appoin-form .pay-label input[type='checkbox'] {
+    display: none; }
+  .appoin-form .pay-label i {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: center;
+    display: inline-block;
+    border: #c7c5c5 solid 1px;
+    color: #ffffff; }
+  .appoin-form .pay-label .text {
+    color: #8b8b8b;
+    width: 70%;
+    font-size: 1.2rem;
+    display: inline-block; }
+.appoin-form .pay {
+  font-size: 1.4rem;
+  padding: 0.6rem 0 0.8rem 0.5rem;
+  display: inline-block; }
+
+.public-sub {
+  background: #f27200;
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: #ffffff; }
+
+/* 上面是保姆预约界面 */
+.baby-partList-nav ul.ul {
+  background: #ffffff;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative; }
+  .baby-partList-nav ul.ul > li {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 25%;
+    float: left;
+    border-right: #ccc solid 1px; }
+    .baby-partList-nav ul.ul > li:last-child {
+      border: none; }
+    .baby-partList-nav ul.ul > li i {
+      font-size: 0.8rem; }
+    .baby-partList-nav ul.ul > li > ol {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background: #fff;
+      width: 100%;
+      left: 0;
+      text-align: left; }
+      .baby-partList-nav ul.ul > li > ol li {
+        padding: 0.8rem 1rem;
+        border-bottom: #eee solid 1px; }
+        .baby-partList-nav ul.ul > li > ol li a {
+          font-size: 1rem;
+          color: #585858; }
+
+/*# sourceMappingURL=style.css.map */
