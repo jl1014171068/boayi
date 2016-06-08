@@ -1,70 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<style>
-@-webkit-keyframes skip {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    25% {
-        -webkit-transform: translate3d(0, -20px, 0);
-        transform: translate3d(0, -20px, 0)
-    }
-    50% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    75% {
-        -webkit-transform: translate3d(0, 20px, 0);
-        transform: translate3d(0, 20px, 0)
-    }
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-}
+<html>
+    <head>
+    <title>glDatePicker 演示程序</title>
+  <link href='http://www.oschina.net/js/2013/glDatePicker/glDatePicker.default.css' rel="stylesheet" type="text/css">
+   
+    </head>
+    <body>
 
-@keyframes skip {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    25% {
-        -webkit-transform: translate3d(0, -20px, 0);
-        transform: translate3d(0, -20px, 0)
-    }
-    50% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    75% {
-        -webkit-transform: translate3d(0, 20px, 0);
-        transform: translate3d(0, 20px, 0)
-    }
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-}
-       .skip{
-       	animation-name:skip;
-       	animation-iteration-count:infinite;
-       	-webkit-animation-duration:1s;
-       }
-	</style>
+    <input type="text" id="example" />
+    
+    </body>
+    <script src="js/zepto.js"></script>
+    <script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/472/lm2nk64s/glDatePicker.js"></script>
+    <script>
+        $(function(){
+    $('#example').on('click',function(){
+        $(this).glDatePicker({
+            //showAlways : false,
+            format : 'yyyy-mm-dd'
+        });
+    
+    })
 
-<div class="skip">
-	测试css3属性
-</div>
-  <script src="js/zepto.js"></script>
-<script>
-// show delete buttons on swipe
-
-</script>
-</body>
+});
+    </script>
 </html>

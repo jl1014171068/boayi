@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<!-- <input type="text" autocorrect="off" /> -->
+<!-- 关闭ios输入法自动修正 -->
+<meta name="format-detection" content="email=no" />
+<!-- 关闭邮箱识别 -->
+<meta name="format-detection" content="telephone=no" />
+<!-- 关闭号码识别 -->
+<title>保姆预约--线下门店</title>
+	<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+	<style>
+		.zoom-handler{
+            display:none;
+        }
+	</style>
+</head>
+<body>
+	<iframe src="http://m.amap.com/navi/?start=''&dest=121.522839,31.264383&destName=上海徐汇门店&key=99b83791f7a104893a0ccd9770f8696d" id='getmap' frameborder="0" height='80%' width="100%"></iframe>
+    <div id='aa'>
+        sdadsadds
+    </div>
+<script src="js/zepto.js"></script>
+<script src="js/script.js"></script>
+<script>
+$(function(){
+$("#aa").click(function(){
+    // $('.route-content').trigger('click');
+// console.log($("#getmap").find('.route-content').html());
+// $("#getmap",document.frames('iframename').document)
+// $(document.getElementById('getmap').contentWindow.document.body).html();
+// document.frames["iName"].document.getElementsByTagName_r('h1')[0].firstChild.data;
+console.log( document.getElementById("getmap").contentWindow.find('.route-content'));
+})
+})
+
+</script>
+</body>
+</html>

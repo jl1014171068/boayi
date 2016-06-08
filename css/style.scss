@@ -23,8 +23,8 @@ $sipe80: 80%;
 body,html{
 	width: $sipe100;
 	height: $sipe100;
-	font-size: $sipe100;
-  overflow-x:hidden; 
+	font-size: 10px;
+  overflow-x:hidden;
 }
 
 // mixin区域
@@ -54,7 +54,7 @@ body,html{
 	position: relative;
     width:$w;
     height:$h;
-    @include borad($size);  
+    @include borad($size);
 	img{
 		position: absolute;
 		max-width: $sipe100;
@@ -64,7 +64,7 @@ body,html{
 		right:0;
 		bottom:0;
 		margin:auto;
-        @include borad($size);   
+        @include borad($size);
 	}
 }
 @mixin textHidden($width){
@@ -73,6 +73,13 @@ body,html{
           overflow: hidden;
           word-break:keep-all;
           white-space:nowrap;
+}
+.pbh2{
+   border-bottom:#d8d8da solid 1px;
+     padding:0.5rem 1rem;
+     font-weight:normal;
+     color:$co585;
+     font-size: 1rem;
 }
 /* 公共调用区域 */
 .fontnormal{
@@ -87,7 +94,7 @@ body,html{
   border:none;
 }
 .clear{
-    zoom: 1; 
+    zoom: 1;
 }
 .clear:after{
     content:'';
@@ -118,7 +125,7 @@ body,html{
 .centerTitle{
      background: $cofff;
      @include borTB(#eee);
-     font-size: 1.3rem;
+     font-size: 1.4rem;
      padding:$si1;
      text-align: center;
      display: block;
@@ -185,7 +192,7 @@ body,html{
 }
 .public-section{
   margin:1.5rem 0.5rem 2rem;
-  @extend .clear;     
+  @extend .clear;
 }
 .formInput{
         background: $cofff;
@@ -196,6 +203,9 @@ body,html{
         padding:0 0.5rem;
         margin-bottom: 0.5rem;
 }
+.block{
+  display: block;
+}
 /* 上面是公用样式 */
 
 .user{
@@ -203,26 +213,27 @@ body,html{
 	.con{
 	  @include 	blocen;
       width:$sipe80;
-      padding:1.5rem 0 $si2 0;
+      padding:1.5rem 0 2.5rem 0;
+      letter-spacing: 0.1rem;
       .user-tx{
       	border:0.3rem solid #fff;
         display:block;
         float: left;
-      	@include poce(5rem,5rem);
+      	@include poce(7rem,7rem);
       }
       .user-info{
       	 display:block;
-      	 margin: 1rem 1.5rem;
+      	 margin: 1.5rem 1.5rem;
       	 float: left;
       	 overflow: hidden;
       	 .name,.tel{
            color: $cofff;
            font-size: 1.2rem;
-           @extend .fontnormal;          
+           @extend .fontnormal;
       	 }
       	 .name{
       	 	font-size: 1.4rem;
-      	 padding:0.3rem 0 0.7rem 0;
+      	 padding:0.3rem 0 0.5rem 0;
       	 }
       }
 	}
@@ -243,14 +254,14 @@ body,html{
         }
         a{
           display: block;
-          width: 100%;     
+          width: 100%;
           color: $co585;
           padding:0.8rem $si1;
            @extend .clear;
            .left,.center,.right{
             display:inline-block;
             vertical-align: middle;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
            }
            .left{
              width: 2.5rem;
@@ -261,8 +272,8 @@ body,html{
              }
            }
            .center{
-              padding-left: 0.4rem;
-              width: 75%;
+              padding-left: 0.5rem;
+              width: 80%;
            }
            @media screen and (max-width: 350px){
              .center{
@@ -273,12 +284,13 @@ body,html{
              text-align: right;
              vertical-align: 0px;
            }
-        } 
+        }
 
     }
   }
   .footer{
      @extend .centerTitle;
+     font-size:1.4rem;
      margin-top:1rem;
   }
 }
@@ -287,7 +299,7 @@ body,html{
     position: relative;
     @extend .centerTitle;
     i{
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       border:none;
       margin-left: 4px;
       vertical-align: -1px;
@@ -307,18 +319,19 @@ body,html{
         border-bottom: #eee solid 1px;
 
         a{
-          font-size: 1rem;
+          font-size: 1.2rem;
           color: $co585;
         }
       }
     }
 }
 .order-con{
+  padding-bottom: 5rem;
   ul{
     @extend .ulno;
     li{
       background: $cofff;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       @include borTB(#eee);
       @extend .clear;
       .title{
@@ -329,7 +342,7 @@ body,html{
         width: 30%;
         @extend .fl;
         .img{
-          height:6rem;         
+          height:6rem;
         img{
           max-width: 100%;
           max-height: 100%;
@@ -341,20 +354,23 @@ body,html{
         width: 70%;
         @extend .fr;
         h2{
-          color: $co585;
+          a{
+            color: $co585;
+          }
           font-size: 1.4rem;
           font-weight: normal;
           @include textHidden(90%);
-          padding-top: 1rem;
           span{
             color: $co888;
-            font-size: 1rem;
+            font-size: 0.8rem;
             padding-left: 1rem
           }
         }
+        
         dl{
+          margin-right: 1rem;
           padding-top:0.8rem;
-          color: $co888; 
+          color: $co888;
         }
       }
     }
@@ -377,7 +393,7 @@ body,html{
     a{
       color: $co585;
     }
-  } 
+  }
  }
  .centerTitle{
    margin-top: 1rem;
@@ -391,7 +407,7 @@ body,html{
   @extend .mob3d;
   ul{
     @extend .ulno;
-    width: 600%;
+    width: 900%;
     @extend .clear;
     height: 100%;
     @extend .mob3d;
@@ -406,7 +422,7 @@ body,html{
         max-height: 100%;
        }
      }
-     @extend .fl;     
+     @extend .fl;
     }
   }
   ol{
@@ -442,20 +458,20 @@ body,html{
         margin-right:0;
        }
       .img{
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         display: inline-block;
         vertical-align: middle;
         img{
           max-width: 100%;
           max-height: 100%;
         }
-      } 
+      }
       .text{
         display: inline-block;
         color: $co585;
-        font-size: 1.2rem;
-        text-indent: 0.3rem;
+        font-size: 1.4rem;
+        text-indent: 0.8rem;
       }
      }
    }
@@ -476,6 +492,7 @@ body,html{
     color: $co555;
     font-size: 1.4rem;
     font-weight: normal;
+    margin-bottom: 2rem;
   }
   ul{
     @extend .ulno;
@@ -483,7 +500,7 @@ body,html{
     &>li{
        border:$coe8e solid 1px;
       background: $cofff;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       @include borTB(#eee);
       @extend .clear;
       .title{
@@ -494,7 +511,7 @@ body,html{
         width: 35%;
         @extend .fl;
         .img{
-          height:6rem;         
+          /* height:6rem; */
         img{
           max-width: 100%;
           max-height: 100%;
@@ -519,7 +536,7 @@ body,html{
         }
         dl{
           padding-top:0.8rem;
-          color: $co888; 
+          color: $co888;
           dt{
             color: $cof27;
           }
@@ -531,13 +548,13 @@ body,html{
         .tip{
           padding-bottom: 0.5rem;
           @extend .ulno;
-          li{           
+          li{
               margin:0.5rem 0.2rem 0 0;
               display: inline-block;
             a{
               background:$coffb;
                padding:2px 2px;
-              color: $cofff;  
+              color: $cofff;
               @include borad(4px);
               font-size: 1rem;
 
@@ -559,11 +576,13 @@ body,html{
          border:#eee solid 1px;
          padding:6px 12px;
          width: 80%;
-         height: 2.5rem;  
+         height:3.5rem;
          display: inline-block;
          font-size: 1.2rem;
          font-weight: normal;
          vertical-align: middle;
+         margin-right: -4px;
+         
       }
       button{
         width: 20%;
@@ -572,8 +591,8 @@ body,html{
          vertical-align: middle;
          font-size: 1.2rem;
           display: inline-block;
-         height: 2.5rem;
-         border-left: none;
+         height: 3.5rem;
+         
       }
     }
   }
@@ -590,9 +609,10 @@ body,html{
     &>li{
       display: inline-block;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1rem;
       width: 20%;
       float: left;
+      color:$co888;
       border-right: $coccc solid 1px;
       &:last-child{
         border:none;
@@ -629,7 +649,7 @@ body,html{
   @extend .clear;
   border:$coeee solid 1px;
   .left{
-        @extend .fl;        
+        @extend .fl;
         width: 40%;
         text-align: center;
         margin:0.8rem 0 1rem 0.4rem;
@@ -684,13 +704,13 @@ body,html{
   .tip{
           padding:0 1rem;
           @extend .ulno;
-          li{           
+          li{
               margin:1rem 0.4rem 0 0;
               display: inline-block;
             a{
               background:$coffb;
                padding:3px 5px;
-              color: $cofff;  
+              color: $cofff;
               @include borad(4px);
               font-size: 1rem;
 
@@ -727,7 +747,7 @@ section.three{
           margin-right: 0;
          }
       }
-    }  
+    }
   }
 }
 .appoin-article-f{
@@ -864,7 +884,7 @@ color: $cofff;
     &>li{
       display: inline-block;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1rem;
       width: 25%;
       float: left;
       border-right: $coccc solid 1px;
@@ -896,4 +916,599 @@ color: $cofff;
     }
     }
   }
+}
+
+// 上面是宝宝宴-列表页
+.baby-article-head{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  ul{
+    @extend .ulno;
+    width: 100%;
+    @extend .clear;
+    height: 100%;
+    li{
+     a{
+      display: block;
+      width: 100%;
+       img{
+        max-width: 100%;
+        max-height: 100%;
+       }
+     }
+    }
+  }
+  .text{
+    position:absolute;
+    padding:5px 10px;
+    display: inline-block;
+    color: $cofff;
+    background: rgba(0,0,0,.5);
+    bottom:20px;
+    left:20px;
+    font-size: 1.2rem;
+     @include borad(20px);
+  }
+}
+
+.baby-article-section{
+  background:#fff;
+  .xing{
+    padding:0.5rem 1rem 0.3rem;
+    i{
+      font-size:1.6rem;
+      margin-right:0.2rem;
+    }
+  }
+  h2{
+    color: $co585;
+    font-size:1rem;
+    font-weight:normal;
+    padding:0.5rem 1rem;
+    border-bottom:#d8d8da solid 1px;
+  }
+  .tel{
+    @extend .aono;
+    width: 100%;
+     padding:1rem;
+     @extend .clear;
+     border-bottom:$coeee solid 1px;
+     .left{
+      height:2rem;
+      width:80%;
+      @extend .fl;
+      color:$co888;
+       i{
+        font-size:1.4rem;
+        margin-right:0.3rem;
+       }
+       font-size:1rem;
+     }
+     .right{
+      height:2rem;
+       width:20%;
+       text-align:center;
+       border-left:$coeee solid 1px;
+      @extend .fr;
+      color:$cof27;
+      font-size:1.6rem;
+     }
+  }
+}
+.baby-article-addr{
+  margin-top:0.5rem;
+  background:#fff;
+  padding:1rem; @extend .clear;
+  .left{
+      width:80%;
+      @extend .fl;
+      color:$co888;
+       i{
+        font-size:1.4rem;
+        margin-right:0.3rem;
+       }
+       .calendars{
+       font-size:1rem;
+        border:none;
+        color:$co585;
+
+       }
+     }
+     .right{
+       color:$co888;
+       width:20%;
+       text-align:center;
+      @extend .fr;
+      font-size:1.6rem;
+     }
+}
+.baby-article-reser{
+  @extend .clear;
+  margin-top:0.5rem;
+  background:#fff;
+  border-top:$coeee solid 1px;
+  border-bottom:$coeee solid 1px;
+  .title{
+     @extend .pbh2;
+  }
+  ul{
+    li{
+       @extend .clear;
+      padding: 1rem;
+      border-bottom:#d8d8da solid 1px;
+      .left{
+        @extend .fl;
+        width:50%;
+        h3{
+          font-size:1rem;
+          color:$co585;
+          padding-bottom:0.3rem;
+          font-weight:normal;
+        }
+        span{
+          color:$cof27;
+          font-size:1rem;
+        }
+      }
+      .right{
+        width:50%;
+        @extend .fr;
+          text-align:right;
+        a{
+          display: inline-block;
+          color:$cofff;
+          padding:0.5rem 1rem;
+          background: $cof27;
+        }
+      }
+    }
+  }
+}
+.baby-article-watch{
+  color:$co585;
+  width: 100%;
+  display: block;
+  margin-top:0.5rem;
+  background:#fff;
+  border-top:$coeee solid 1px;
+  border-bottom:$coeee solid 1px;
+  padding:1rem;
+  span{
+    width: 85%;
+    display: inline-block;
+  }
+  i{
+    font-size: 1.6rem;
+  }
+}
+.baby-article-near{
+  &>h2{
+    @extend .pbh2;
+  }
+  ul{
+    @extend .ulno;
+    &>li{
+       border:$coe8e solid 1px;
+      background: $cofff;
+      margin-top: 1rem;
+      @include borTB(#eee);
+      @extend .clear;
+      .title{
+       @extend .leftTitle;
+      }
+      .left{
+        padding: 0.5rem;
+        width: 35%;
+        @extend .fl;
+        .img{
+          height:6rem;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+        }
+      }
+      .right{
+         padding:0.5rem;
+        width: 65%;
+        @extend .fr;
+        h2{
+          color: $co585;
+          font-size: 1rem;
+          font-weight: normal;
+          @include textHidden(90%);
+          padding-top: 0.5rem;
+          span{
+            color: $co888;
+            font-size: 0.8rem;
+            padding-left: 1rem
+          }
+        }
+        dl{
+          padding-top:0.5rem;
+          color: $co888;
+          width: 100%;
+          dt{
+            color: $cof27;
+          }
+          dd.xing{
+            color: $co888;
+            font-size: 1rem;
+          }
+        }
+        .info{
+          color:$co888;
+          padding-top: 0.2rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+// 上面是宝宝宴详情界面
+.baby-menu{
+  background:$cofff;
+  .leftTitle{
+     margin-top:0.5rem;
+  }
+  ul{
+    h3{
+      background:#f7f5ec;
+      padding:0.5rem 0;
+      text-align:center;
+      color:$co585;
+      margin-bottom:0.5rem;
+      font-size:1rem;
+    }
+    padding:0 0 0.5rem 0;
+    li{
+      @extend .clear;
+      div{
+        color:$co585;
+        font-size:0.8rem;
+        float:left;
+        width: 33.333%;
+        text-align:center;
+        padding:0.5rem 0;
+      }
+    }
+  }
+}
+// 上面是宝宝宴-标准桌
+.baby-reser-section{
+  background:$cofff;
+  padding:1rem;
+  margin:0.5rem 0;
+  form{
+    .form-group{
+      margin:0 0 1rem 0;
+      @extend .clear;
+      width: 100%;
+      .inline-label{
+        width:30%;
+        @extend .fl;
+        color:$co888;
+        display: inline-block;
+        vertical-align: middle;
+        height: 2rem;
+        line-height: 2.3rem;
+      }
+      .inline{
+        vertical-align: middle;
+        display: inline-block;
+        width:70%;
+        @extend .fl;
+        padding:0.5rem;
+        outline: none;
+        border: none;
+        color: $co585;
+        border:#dcdcdc solid 1px;
+      }
+    }
+    .wai{
+      padding-top:1rem;
+      .submit{
+      @extend .public-sub;
+      position: absolute;
+      bottom: 0;
+      left:0;
+    }
+    }
+  }
+
+}
+/* 上面是宝宝宴-提交预定页面 */
+.baby-pic-top{
+  @extend .aono;
+  width: 100%;
+  text-align: center;
+  @extend .clear;
+  li{
+    overflow: hidden;
+    @extend .fl;
+    width: 33.333%;
+    background: $cofff;
+    &.active{
+      a{
+         border-bottom: $cof27 solid 2px;
+         color: $cof27;
+      }
+    }
+    a{
+      width: 80%;
+      padding:1rem 0;
+      display: inline-block;
+
+      color: $co585;
+      font-size: 1rem;
+    }
+  }
+}
+.baby-pics{
+  ul{
+    margin:0 3%;
+    li{
+      margin-top: 1rem;
+      &:first-child{
+        margin-right:6%;
+      };
+      width: 47%;
+      @extend .fl;
+      a{
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+/* 上面是宝宝宴图片列表页面 */
+.apply{
+
+   .form-group{
+      @extend .clear;
+     margin:0 3%;
+     .label{
+      font-size: 1rem;
+      color: $co585;
+      padding:0.5rem;
+      display: block;
+     }
+     .inp,.select{
+      width: 100%;
+       padding:0.8rem 0.5rem;
+        outline: none;
+        border: none;
+        color: $co585;
+        border:#dcdcdc solid 1px;
+     }
+     .select-group{
+      margin-top: 0.5rem;
+      &:first-child{
+        margin-right:4%;
+      }
+     @extend .fl;
+      width: 48%;
+     }
+   }
+   .tip{
+    margin:1rem 3%;
+    color: $co888;
+    margin-top: 1rem;
+      @extend .clear;
+    .left{
+      text-align: center;
+      @extend .fl;
+      width: 20%;
+    }
+    .right{
+      line-height: 1.2rem;
+      @extend .fl;
+      font-size: 1rem;
+      width: 80%;
+    }
+   }
+   .wai{
+      padding-top:1rem;
+      .submit{
+      @extend .public-sub;
+      position: absolute;
+      bottom: 0;
+      left:0;
+    }
+    }
+}
+
+/* 上面是apply页面 */
+.offline-list-top{
+  margin:0.5rem;
+  background:$cofff;
+  border:#bfbfbf solid 1px;
+  padding:0.5rem 0.3rem 0.3rem 0.3rem;
+  @extend .clear;
+  .left{
+    width:35%;
+    @extend .fl;
+    .img{
+       img{
+        max-height:100%;
+        max-width:100%;
+       }
+    }
+  }
+  .right{
+    width:65%;
+    @extend .fl;
+    h3{
+      @extend .pbh2;
+      border:none;
+    }
+    span{
+      color:$co585;
+      font-size:0.8rem;
+      display: block;
+      padding:0.3rem 1rem;
+    }
+  }
+}
+.offline-list{
+    &>h2{
+      @extend .pbh2;
+      border:none;
+    }
+   .offline-list-ul{
+   margin:0.5rem;
+  li{
+  padding:0.5rem 0.3rem 0.3rem 0.3rem;
+  border:#bfbfbf solid 1px;
+  background:$cofff;
+  margin:0.5rem 0;
+  @extend .clear;
+    .left{
+    width:30%;
+    @extend .fl;
+    .img{
+      height:5.5rem;
+       img{
+        max-height:100%;
+        max-width:100%;
+       }
+    }
+  }
+  .center{
+    width:50%;
+    @extend .fl;
+    h3{
+      @extend .pbh2;
+      border:none;
+    }
+    span{
+      color:$co585;
+      font-size:0.8rem;
+      display: block;
+      padding:0.3rem 1rem;
+    }
+  }
+  .right{
+    width:20%;
+    @extend .fl;
+    display: inline-block;
+          color:$cofff;
+          padding:0.5rem 0;
+          text-align:center;
+          font-size:1;
+          background: $cof27;
+          margin-top:0.5rem;
+  }
+  }
+}
+}
+// ----------------------------------------
+.other-top{
+  margin-bottom:1rem;
+   @extend .aono;
+  width: 100%;
+  text-align: center;
+  @extend .clear;
+  li{
+    overflow: hidden;
+    @extend .fl;
+    width: 25%;
+    background: $cofff;
+    &.active{
+      a{
+         border-bottom: $cof27 solid 2px;
+         color: $cof27;
+      }
+    }
+    a{
+      width: 80%;
+      padding:1rem 0;
+      display: inline-block;
+
+      color: $co585;
+      font-size: 1rem;
+    }
+  }
+}
+
+// 下面是预约日期组件
+.apd-data{
+	background:$cofff;
+	border:#d9d9d9 solid 1px;
+	padding:1rem 0.5rem;
+	margin-top: 1rem;
+	.apd-top{
+		padding:0.5rem 0;
+		@extend .clear;
+		.left,.center,.right{
+      @extend .fl;
+			display: inline-block;;
+			width: 10%;
+			color:#7e7e7e;
+		}
+		.center{
+			width: 80%;
+		}
+		.right{
+			text-align: right;
+		}
+	}
+// 上面是头部控制
+	.apd-xingqi{
+		
+		background: #f5f5f5;
+		ul{
+			@extend .clear;
+			li{
+        border:#e2e2e2 solid 1px;
+        
+				color:#979797;
+				font-size:1rem;
+				width: 14.285%;
+				@extend .fl;
+				text-align: center;
+				padding:0.5rem 0;
+        cursor: pointer;
+         min-height: 2rem;
+			}
+		}
+	}
+	// 上面是星期块
+	.apd-md{
+		 ul{
+      @extend .clear;
+      
+      li{
+        border:#e2e2e2 solid 1px;
+        color:#979797;
+        background: #f5f5f5;
+        font-size:1rem;
+        width: 14.285%;
+        @extend .fl;
+        text-align: right;
+        cursor: pointer;
+        height: 2.5rem;
+        padding:0 1rem;
+        line-height: 2.5rem;
+        &.disable{
+          color:#b5b5b5;
+          background:#fefefe;
+          &:hover,&:active,&:link,&:focus,&:visited{
+            background: #fefefe;
+            color:#979797; 
+          }
+        }
+        &.now{
+          background: #CFC;
+        }
+        &.active{
+          color:#fff;
+          background: #f57aae;
+          text-align: center;
+        }
+      }
+    }
+	}
 }
