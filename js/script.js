@@ -295,3 +295,13 @@ $("#sub").tap(function(){
 })
 //下面是调用日历，第一个参数为id名第二个为已经被挑选的日期传入，没有的话''即可
 apdData("dataTime",['2016,6,30','2016,6,29']);
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function(event) {
+//     document.documentElement.style.fontSize = window.innerWidth/40 + "px";
+//   });

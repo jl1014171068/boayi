@@ -19,14 +19,23 @@ $si1: 1rem;
 $si2: 2rem;
 $sipe100: 100%;
 $sipe80: 80%;
-
+html{
+  height: $sipe100;
+}
 body,html{
 	width: $sipe100;
-	height: $sipe100;
+	
 	font-size: 10px;
   overflow-x:hidden;
-}
+     
+          position:relative;
+box-sizing:border-box;
 
+}
+body{
+  padding-bottom: 4rem;
+   min-height: 100%;
+}
 // mixin区域
 @mixin blocen($size:0){
     margin: $size auto;
@@ -76,10 +85,10 @@ body,html{
 }
 .pbh2{
    border-bottom:#d8d8da solid 1px;
-     padding:0.5rem 1rem;
+     padding:1rem 1rem;
      font-weight:normal;
      color:$co585;
-     font-size: 1rem;
+     font-size: 1.6rem;
 }
 /* 公共调用区域 */
 .fontnormal{
@@ -125,7 +134,7 @@ body,html{
 .centerTitle{
      background: $cofff;
      @include borTB(#eee);
-     font-size: 1.4rem;
+     font-size: 1.6rem;
      padding:$si1;
      text-align: center;
      display: block;
@@ -134,7 +143,7 @@ body,html{
 }
 .leftTitle{
         color: $co585;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding:$si1;
         font-weight: normal;
         border-bottom: #eee solid 1px;
@@ -154,7 +163,7 @@ body,html{
   -o-transform:translate3d(0,0,0);
   -moz-transform:translate3d(0,0,0);
 }
-.text-justify{
+.text-justify1{
   text-align-last: justify !important;
   -moz-text-align-last: justify !important;
   text-align: justify !important;
@@ -187,7 +196,7 @@ body,html{
      }
      i{
         color: #d3d3d3;
-      font-size: 1rem;
+      font-size: 1.4rem;
       }
 }
 .public-section{
@@ -197,11 +206,11 @@ body,html{
 .formInput{
         background: $cofff;
         color:$co888;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         border:$coeee solid 1px;
-        height: 3rem;
-        padding:0 0.5rem;
-        margin-bottom: 0.5rem;
+        height: 3.5rem;
+       padding:6px 12px;
+        margin-bottom:1rem;
 }
 .block{
   display: block;
@@ -228,11 +237,11 @@ body,html{
       	 overflow: hidden;
       	 .name,.tel{
            color: $cofff;
-           font-size: 1.2rem;
+           font-size: 1.4rem;
            @extend .fontnormal;
       	 }
       	 .name{
-      	 	font-size: 1.4rem;
+      	 	font-size: 1.6rem;
       	 padding:0.3rem 0 0.5rem 0;
       	 }
       }
@@ -256,7 +265,7 @@ body,html{
           display: block;
           width: 100%;
           color: $co585;
-          padding:0.8rem $si1;
+          padding:1rem $si1;
            @extend .clear;
            .left,.center,.right{
             display:inline-block;
@@ -290,6 +299,7 @@ body,html{
   }
   .footer{
      @extend .centerTitle;
+     padding:1.5rem 0;
      font-size:1.4rem;
      margin-top:1rem;
   }
@@ -299,7 +309,7 @@ body,html{
     position: relative;
     @extend .centerTitle;
     i{
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       border:none;
       margin-left: 4px;
       vertical-align: -1px;
@@ -319,14 +329,13 @@ body,html{
         border-bottom: #eee solid 1px;
 
         a{
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           color: $co585;
         }
       }
     }
 }
 .order-con{
-  padding-bottom: 5rem;
   ul{
     @extend .ulno;
     li{
@@ -342,7 +351,7 @@ body,html{
         width: 30%;
         @extend .fl;
         .img{
-          height:6rem;
+          /* height:6rem; */
         img{
           max-width: 100%;
           max-height: 100%;
@@ -351,25 +360,29 @@ body,html{
       }
       .right{
          padding:$si1 0.5rem;
-        width: 70%;
+        width: 65%;
+        margin-left: 4%;
         @extend .fr;
         h2{
+          padding-top: 1rem;
           a{
+            font-size: 1.6rem;
             color: $co585;
           }
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           font-weight: normal;
           @include textHidden(90%);
           span{
             color: $co888;
-            font-size: 0.8rem;
+            font-size:1.4rem;
             padding-left: 1rem
           }
         }
         
         dl{
           margin-right: 1rem;
-          padding-top:0.8rem;
+          font-size:1.4rem;
+          padding-top:1.2rem;
           color: $co888;
         }
       }
@@ -380,7 +393,7 @@ body,html{
 .address{
  .title{
    @extend .leftTitle;
-   padding:1.2rem $si1 0.6rem $si1;
+   padding:1.5rem $si1 1.3rem $si1;
    color: $co888;
    background: $cofff;
    border-bottom: $cod3d solid 1px;
@@ -390,6 +403,7 @@ body,html{
   background: $cofff;
   li{
     @extend .leftTitle;
+    padding:1.5rem $si1;
     a{
       color: $co585;
     }
@@ -397,6 +411,8 @@ body,html{
  }
  .centerTitle{
    margin-top: 1rem;
+   padding:1.5rem 0;
+   font-size: 1.6rem;
  }
 }
 /* 个人中心-地址管理结束 */
@@ -470,7 +486,7 @@ body,html{
       .text{
         display: inline-block;
         color: $co585;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         text-indent: 0.8rem;
       }
      }
@@ -482,7 +498,8 @@ body,html{
       display: block;
       color: $co888;
       margin-top: 0.8rem;
-      line-height: 1.2rem;
+      line-height: 1.6rem;
+      font-size: 1.4rem;
     }
   .tj{
     background: url('../img/xian.png') no-repeat center center;
@@ -490,9 +507,9 @@ body,html{
     width: 100%;
     text-align: center;
     color: $co555;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: normal;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   ul{
     @extend .ulno;
@@ -523,40 +540,45 @@ body,html{
         width: 65%;
         @extend .fr;
         h2{
+          a{
+             color: $co585;
+          }
           color: $co585;
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           font-weight: normal;
           @include textHidden(90%);
           padding-top: 0.5rem;
           span{
             color: $co888;
-            font-size: 1rem;
+            font-size: 1.4rem;
             padding-left: 1rem
           }
         }
         dl{
           padding-top:0.8rem;
           color: $co888;
+           font-size: 1.6rem;
           dt{
             color: $cof27;
           }
           dd.xing{
             color: $co888;
-            font-size: 1rem;
+            font-size: 1.6rem;
           }
         }
         .tip{
           padding-bottom: 0.5rem;
           @extend .ulno;
           li{
-              margin:0.5rem 0.2rem 0 0;
+              margin:0.5rem 0.5rem 0 0;
               display: inline-block;
-            a{
               background:$coffb;
-               padding:2px 2px;
-              color: $cofff;
+               padding:0.3rem;
               @include borad(4px);
-              font-size: 1rem;
+            a{
+              color: $cofff;
+              display: inline-block;
+              font-size: 1.2rem;
 
             }
           }
@@ -577,19 +599,22 @@ body,html{
          padding:6px 12px;
          width: 80%;
          height:3.5rem;
+         line-height: 3rem;
          display: inline-block;
-         font-size: 1.2rem;
+         font-size: 1.4rem;
          font-weight: normal;
          vertical-align: middle;
          margin-right: -4px;
-         
+-webkit-appearance:none;
+outline:none;
+border-radius:0;
       }
       button{
         width: 20%;
          border:#eee solid 1px;
          background: #fff;
          vertical-align: middle;
-         font-size: 1.2rem;
+         font-size: 1.4rem;
           display: inline-block;
          height: 3.5rem;
          
@@ -604,12 +629,12 @@ body,html{
     @extend .ulno;
     background: $cofff;
     width: 100%;
-    padding:1rem 0;
+    padding:1.5rem 0;
     position:relative;
     &>li{
       display: inline-block;
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.6rem;
       width: 20%;
       float: left;
       color:$co888;
@@ -618,7 +643,7 @@ body,html{
         border:none;
       }
       i{
-          font-size: 0.8rem;
+          font-size: 1.6rem;
         }
       &>ol{
       @extend .ulno;
@@ -631,10 +656,10 @@ body,html{
       left:0;
       text-align: left;
       li{
-        padding:0.8rem $si1;
+        padding:1rem $si1;
         border-bottom: #eee solid 1px;
         a{
-          font-size: 1rem;
+          font-size: 1.4rem;
           color: $co585;
         }
       }
@@ -652,9 +677,9 @@ body,html{
         @extend .fl;
         width: 40%;
         text-align: center;
-        margin:0.8rem 0 1rem 0.4rem;
+        margin:1rem 1rem 2rem 1rem;
         display: inline-block;
-        @include poce(7rem,7rem);
+        @include poce(8rem,8rem);
         border:0.3rem solid $codfd;
   }
   .right{
@@ -664,22 +689,22 @@ body,html{
      margin:2rem 0 0 0.6rem;
      .number{
       color: #1b5d9b;
-      font-size: 1rem;
+      font-size: 1.4rem;
      }
      h3{
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: $co585;
       font-weight: normal;
       margin:1rem 0 1rem 0;
       span{
             color: $co888;
-            font-size: 1rem;
+            font-size: 1.4rem;
             padding-left: 1rem
       }
      }
      dl{
       dt{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: $cof27;
       }
      }
@@ -693,8 +718,9 @@ body,html{
     width: 100%;
     text-align: center;
     color: $co555;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: normal;
+    margin-bottom: 1.5rem;
   }
   section{
     @extend .clear;
@@ -704,15 +730,16 @@ body,html{
   .tip{
           padding:0 1rem;
           @extend .ulno;
-          li{
-              margin:1rem 0.4rem 0 0;
+         li{
+              margin:0 0.5rem 1rem 0;
               display: inline-block;
-            a{
               background:$coffb;
-               padding:3px 5px;
-              color: $cofff;
+               padding:0.3rem;
               @include borad(4px);
-              font-size: 1rem;
+            a{
+              color: $cofff;
+              display: inline-block;
+              font-size: 1.2rem;
 
             }
           }
@@ -720,13 +747,14 @@ body,html{
   }
   section.two{
     .tj{
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
       padding:0 1rem;
       p{
         color: $co888;
-        font-size: 1.2rem;
-        line-height: 1.3;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        letter-spacing: 0.1rem;
       }
   }
 section.three{
@@ -751,8 +779,20 @@ section.three{
   }
 }
 .appoin-article-f{
-  .public-sub{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  .public-sub-radius{
     width: 48%;
+    display: inline-block;
+    font-size: 1.6rem;
+    background: #f27200;
+    border: none;
+    color: #ffffff;
+    line-height: 4rem;
+    height: 4rem;
     &:first-child{
       margin-right:2%;
     }
@@ -764,20 +804,22 @@ section.three{
  margin:1rem 0.5rem;
  padding:1.5rem 1rem;
   background:#fff;
+  border:$coeee solid 1px;
   .dl-inline{
     width: 100%;
     padding: 0 0 1rem 0;
     dt{
-      width:6rem;
+      width:30%;
       color:$co585;
-      font-size:1.4rem;
+      font-size:1.6rem;
       letter-spacing: 0.1rem;
     }
     dd{
-      font-size: 1rem;
+      font-size: 1.4rem;
       color:$co888;
+      padding-left: 2rem;
       &.cof27{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 600;
       }
     }
@@ -800,18 +842,20 @@ section.three{
      .input{
         width: 100%;
         @extend .formInput;
-        height: 2.4rem;
-
-        padding:1.6rem 0.5rem 1.4rem 0.5rem;
+            height: 3.5rem;
+            line-height: 3rem;
+             font-size: 1.4rem;
+        padding: 6px 12px;
      }
   }
   .public-h2{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: $co585;
     font-weight: normal;
-    padding:0.5rem;
+    padding:1rem;
   }
   .pay-label{
+    font-size: 1.4rem;
     &.active{
       i{
         color: #666;
@@ -852,7 +896,7 @@ section.three{
         .text{
            color: #8b8b8b;
            width: 70%;
-           font-size: 1.2rem;
+           font-size: 1.4rem;
            display: inline-block;
         }
 
@@ -867,9 +911,17 @@ section.three{
 background: $cof27;
 border:none;
 width: 100%;
-padding:1rem 0;
-font-size: 1.4rem;
+font-size: 1.6rem;
 color: $cofff;
+line-height: 4rem;
+  position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            height:4rem;
+
+            text-align:center;
+
 }
 
 /* 上面是保姆预约界面 */
@@ -884,16 +936,17 @@ color: $cofff;
     &>li{
       display: inline-block;
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.6rem;
       width: 25%;
       float: left;
       border-right: $coccc solid 1px;
+      color:$co888;
       &:last-child{
         border:none;
       }
 
       i{
-          font-size: 0.8rem;
+          font-size: 1.6rem;
         }
       &>ol{
       @extend .ulno;
@@ -906,10 +959,10 @@ color: $cofff;
       left:0;
       text-align: left;
       li{
-        padding:0.8rem $si1;
+        padding:1rem $si1;
         border-bottom: #eee solid 1px;
         a{
-          font-size: 1rem;
+          font-size: 1.4rem;
           color: $co585;
         }
       }
@@ -959,11 +1012,12 @@ color: $cofff;
     i{
       font-size:1.6rem;
       margin-right:0.2rem;
+         
     }
   }
   h2{
     color: $co585;
-    font-size:1rem;
+    font-size:1.6rem;
     font-weight:normal;
     padding:0.5rem 1rem;
     border-bottom:#d8d8da solid 1px;
@@ -982,8 +1036,10 @@ color: $cofff;
        i{
         font-size:1.4rem;
         margin-right:0.3rem;
+         width: 1.6rem;
+    display: inline-block;
        }
-       font-size:1rem;
+       font-size:1.4rem;
      }
      .right{
       height:2rem;
@@ -1007,9 +1063,11 @@ color: $cofff;
        i{
         font-size:1.4rem;
         margin-right:0.3rem;
+ width: 1.2rem;
+    display: inline-block;
        }
        .calendars{
-       font-size:1rem;
+       font-size:1.4rem;
         border:none;
         color:$co585;
 
@@ -1035,20 +1093,20 @@ color: $cofff;
   ul{
     li{
        @extend .clear;
-      padding: 1rem;
+      padding:1.5rem 1rem;
       border-bottom:#d8d8da solid 1px;
       .left{
         @extend .fl;
         width:50%;
         h3{
-          font-size:1rem;
+          font-size:1.6rem;
           color:$co585;
           padding-bottom:0.3rem;
           font-weight:normal;
         }
         span{
           color:$cof27;
-          font-size:1rem;
+          font-size:1.6rem;
         }
       }
       .right{
@@ -1056,10 +1114,12 @@ color: $cofff;
         @extend .fr;
           text-align:right;
         a{
+          text-align: center;
           display: inline-block;
           color:$cofff;
-          padding:0.5rem 1rem;
+          padding:0.5rem 2rem;
           background: $cof27;
+          font-size: 1.4rem;
         }
       }
     }
@@ -1073,9 +1133,10 @@ color: $cofff;
   background:#fff;
   border-top:$coeee solid 1px;
   border-bottom:$coeee solid 1px;
-  padding:1rem;
+  padding:1.5rem 1rem;
   span{
-    width: 85%;
+    font-size: 1.6rem;
+    width: 90%;
     display: inline-block;
   }
   i{
@@ -1155,11 +1216,11 @@ color: $cofff;
   ul{
     h3{
       background:#f7f5ec;
-      padding:0.5rem 0;
+      padding:1rem 0;
       text-align:center;
       color:$co585;
       margin-bottom:0.5rem;
-      font-size:1rem;
+      font-size:1.6rem;
     }
     padding:0 0 0.5rem 0;
     li{
@@ -1170,7 +1231,8 @@ color: $cofff;
         float:left;
         width: 33.333%;
         text-align:center;
-        padding:0.5rem 0;
+        padding:1rem 0;
+        font-size: 1.4rem;
       }
     }
   }
@@ -1191,15 +1253,23 @@ color: $cofff;
         color:$co888;
         display: inline-block;
         vertical-align: middle;
-        height: 2rem;
-        line-height: 2.3rem;
+        height: 2.4rem;
+        line-height: 3rem;
+        font-size: 1.4rem;
       }
       .inline{
+        &.pano{
+          padding:0 12px;
+          height: 3rem;
+        }
         vertical-align: middle;
         display: inline-block;
         width:70%;
         @extend .fl;
         padding:0.5rem;
+        font-size: 1.4rem;
+            height: 2.4rem;
+         padding: 1.6rem 0.5rem 1.4rem;
         outline: none;
         border: none;
         color: $co585;
@@ -1210,6 +1280,7 @@ color: $cofff;
       padding-top:1rem;
       .submit{
       @extend .public-sub;
+      height:4.2rem;
       position: absolute;
       bottom: 0;
       left:0;
@@ -1241,7 +1312,7 @@ color: $cofff;
       display: inline-block;
 
       color: $co585;
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -1270,14 +1341,17 @@ color: $cofff;
       @extend .clear;
      margin:0 3%;
      .label{
-      font-size: 1rem;
+      font-size: 1.4rem;
       color: $co585;
       padding:0.5rem;
       display: block;
      }
      .inp,.select{
       width: 100%;
-       padding:0.8rem 0.5rem;
+      height: 3.5rem;
+            line-height: 3rem;
+             font-size: 1.4rem;
+        padding: 6px 12px;
         outline: none;
         border: none;
         color: $co585;
@@ -1301,11 +1375,12 @@ color: $cofff;
       text-align: center;
       @extend .fl;
       width: 20%;
+      font-size:1.4rem;
     }
     .right{
-      line-height: 1.2rem;
+      line-height: 1.6rem;
       @extend .fl;
-      font-size: 1rem;
+      font-size:1.4rem;
       width: 80%;
     }
    }
@@ -1316,6 +1391,7 @@ color: $cofff;
       position: absolute;
       bottom: 0;
       left:0;
+      height:4.2rem;
     }
     }
 }
@@ -1423,12 +1499,15 @@ color: $cofff;
       }
     }
     a{
-      width: 80%;
+      width: 90%;
       padding:1rem 0;
       display: inline-block;
-
+     text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
       color: $co585;
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -1437,10 +1516,11 @@ color: $cofff;
 .apd-data{
 	background:$cofff;
 	border:#d9d9d9 solid 1px;
-	padding:1rem 0.5rem;
+	padding:0 0.5rem 1rem;
 	margin-top: 1rem;
 	.apd-top{
-		padding:0.5rem 0;
+    font-size: 1.6rem;
+		padding:1.5rem 0;
 		@extend .clear;
 		.left,.center,.right{
       @extend .fl;
@@ -1463,13 +1543,12 @@ color: $cofff;
 			@extend .clear;
 			li{
         border:#e2e2e2 solid 1px;
-        
+        font-size: 1.4rem;
 				color:#979797;
-				font-size:1rem;
 				width: 14.285%;
 				@extend .fl;
 				text-align: center;
-				padding:0.5rem 0;
+				padding:1rem 0;
         cursor: pointer;
          min-height: 2rem;
 			}
@@ -1484,14 +1563,14 @@ color: $cofff;
         border:#e2e2e2 solid 1px;
         color:#979797;
         background: #f5f5f5;
-        font-size:1rem;
+        font-size:1.4rem;
         width: 14.285%;
         @extend .fl;
         text-align: right;
         cursor: pointer;
-        height: 2.5rem;
+        height: 4rem;
         padding:0 1rem;
-        line-height: 2.5rem;
+        line-height: 4rem;
         &.disable{
           color:#b5b5b5;
           background:#fefefe;

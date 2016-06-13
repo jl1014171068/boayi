@@ -1,18 +1,26 @@
 @charset "UTF-8";
 /* color区域 co+首三位位 */
 /* 大小区域size开头 */
+html {
+  height: 100%; }
+
 body, html {
   width: 100%;
-  height: 100%;
   font-size: 10px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box; }
+
+body {
+  padding-bottom: 4rem;
+  min-height: 100%; }
 
 .pbh2, .baby-article-reser .title, .baby-article-near > h2, .offline-list-top .right h3, .offline-list > h2, .offline-list .offline-list-ul li .center h3 {
   border-bottom: #d8d8da solid 1px;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   font-weight: normal;
   color: #585858;
-  font-size: 1rem; }
+  font-size: 1.6rem; }
 
 /* 公共调用区域 */
 .fontnormal, .user .con .user-info .name, .user .con .user-info .tel {
@@ -57,7 +65,7 @@ body, html {
   background: #ffffff;
   border-top: #eee solid 1px;
   border-bottom: #eee solid 1px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 1rem;
   text-align: center;
   display: block;
@@ -66,7 +74,7 @@ body, html {
 
 .leftTitle, .order-con ul li .title, .address .title, .address ul li, .appoin-section ul > li .title, .baby-article-near ul > li .title {
   color: #585858;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 1rem;
   font-weight: normal;
   border-bottom: #eee solid 1px; }
@@ -84,7 +92,7 @@ body, html {
   -o-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0); }
 
-.text-justify {
+.text-justify1 {
   text-align-last: justify !important;
   -moz-text-align-last: justify !important;
   text-align: justify !important; }
@@ -101,7 +109,7 @@ body, html {
   color: #f27200; }
 .xing i {
   color: #d3d3d3;
-  font-size: 1rem; }
+  font-size: 1.4rem; }
 
 .public-section {
   margin: 1.5rem 0.5rem 2rem; }
@@ -109,11 +117,11 @@ body, html {
 .formInput, .appoin-form .form-group .select, .appoin-form .form-group .input {
   background: #ffffff;
   color: #888888;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: #eee solid 1px;
-  height: 3rem;
-  padding: 0 0.5rem;
-  margin-bottom: 0.5rem; }
+  height: 3.5rem;
+  padding: 6px 12px;
+  margin-bottom: 1rem; }
 
 .block {
   display: block; }
@@ -159,9 +167,9 @@ body, html {
       overflow: hidden; }
       .user .con .user-info .name, .user .con .user-info .tel {
         color: #ffffff;
-        font-size: 1.2rem; }
+        font-size: 1.4rem; }
       .user .con .user-info .name {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding: 0.3rem 0 0.5rem 0; }
 
 .user-con ul {
@@ -175,7 +183,7 @@ body, html {
       display: block;
       width: 100%;
       color: #585858;
-      padding: 0.8rem 1rem; }
+      padding: 1rem 1rem; }
       .user-con ul li a .left, .user-con ul li a .center, .user-con ul li a .right {
         display: inline-block;
         vertical-align: middle;
@@ -196,6 +204,7 @@ body, html {
         text-align: right;
         vertical-align: 0px; }
 .user-con .footer {
+  padding: 1.5rem 0;
   font-size: 1.4rem;
   margin-top: 1rem; }
 
@@ -203,7 +212,7 @@ body, html {
 .order-head {
   position: relative; }
   .order-head i {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     border: none;
     margin-left: 4px;
     vertical-align: -1px; }
@@ -219,58 +228,64 @@ body, html {
       padding: 0.8rem 1rem;
       border-bottom: #eee solid 1px; }
       .order-head ul li a {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: #585858; }
 
-.order-con {
-  padding-bottom: 5rem; }
-  .order-con ul li {
-    background: #ffffff;
-    margin-top: 0.5rem;
-    border-top: #eee solid 1px;
-    border-bottom: #eee solid 1px; }
-    .order-con ul li .left {
-      padding: 1rem 0.5rem;
-      width: 30%; }
-      .order-con ul li .left .img {
-        height: 6rem; }
-        .order-con ul li .left .img img {
-          max-width: 100%;
-          max-height: 100%; }
-    .order-con ul li .right {
-      padding: 1rem 0.5rem;
-      width: 70%; }
-      .order-con ul li .right h2 {
+.order-con ul li {
+  background: #ffffff;
+  margin-top: 0.5rem;
+  border-top: #eee solid 1px;
+  border-bottom: #eee solid 1px; }
+  .order-con ul li .left {
+    padding: 1rem 0.5rem;
+    width: 30%; }
+    .order-con ul li .left .img {
+      /* height:6rem; */ }
+      .order-con ul li .left .img img {
+        max-width: 100%;
+        max-height: 100%; }
+  .order-con ul li .right {
+    padding: 1rem 0.5rem;
+    width: 65%;
+    margin-left: 4%; }
+    .order-con ul li .right h2 {
+      padding-top: 1rem;
+      font-size: 1.6rem;
+      font-weight: normal;
+      width: 90%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap; }
+      .order-con ul li .right h2 a {
+        font-size: 1.6rem;
+        color: #585858; }
+      .order-con ul li .right h2 span {
+        color: #888888;
         font-size: 1.4rem;
-        font-weight: normal;
-        width: 90%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        word-break: keep-all;
-        white-space: nowrap; }
-        .order-con ul li .right h2 a {
-          color: #585858; }
-        .order-con ul li .right h2 span {
-          color: #888888;
-          font-size: 0.8rem;
-          padding-left: 1rem; }
-      .order-con ul li .right dl {
-        margin-right: 1rem;
-        padding-top: 0.8rem;
-        color: #888888; }
+        padding-left: 1rem; }
+    .order-con ul li .right dl {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      padding-top: 1.2rem;
+      color: #888888; }
 
 /* 我的订单结束 */
 .address .title {
-  padding: 1.2rem 1rem 0.6rem 1rem;
+  padding: 1.5rem 1rem 1.3rem 1rem;
   color: #888888;
   background: #ffffff;
   border-bottom: #d3d3d3 solid 1px; }
 .address ul {
   background: #ffffff; }
-  .address ul li a {
-    color: #585858; }
+  .address ul li {
+    padding: 1.5rem 1rem; }
+    .address ul li a {
+      color: #585858; }
 .address .centerTitle, .address .user-con .footer, .user-con .address .footer, .address .order-head {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  padding: 1.5rem 0;
+  font-size: 1.6rem; }
 
 /* 个人中心-地址管理结束 */
 .appoin-head {
@@ -325,7 +340,7 @@ body, html {
     .appoin-nav ul li .text {
       display: inline-block;
       color: #585858;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       text-indent: 0.8rem; }
 
 .appoin-section .info {
@@ -333,16 +348,17 @@ body, html {
   display: block;
   color: #888888;
   margin-top: 0.8rem;
-  line-height: 1.2rem; }
+  line-height: 1.6rem;
+  font-size: 1.4rem; }
 .appoin-section .tj {
   background: url("../img/xian.png") no-repeat center center;
   background-size: contain;
   width: 100%;
   text-align: center;
   color: #555555;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: normal;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
 .appoin-section ul {
   padding: 0 3%; }
   .appoin-section ul > li {
@@ -364,7 +380,7 @@ body, html {
       width: 65%; }
       .appoin-section ul > li .right h2 {
         color: #585858;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: normal;
         width: 90%;
         text-overflow: ellipsis;
@@ -372,33 +388,37 @@ body, html {
         word-break: keep-all;
         white-space: nowrap;
         padding-top: 0.5rem; }
+        .appoin-section ul > li .right h2 a {
+          color: #585858; }
         .appoin-section ul > li .right h2 span {
           color: #888888;
-          font-size: 1rem;
+          font-size: 1.4rem;
           padding-left: 1rem; }
       .appoin-section ul > li .right dl {
         padding-top: 0.8rem;
-        color: #888888; }
+        color: #888888;
+        font-size: 1.6rem; }
         .appoin-section ul > li .right dl dt {
           color: #f27200; }
         .appoin-section ul > li .right dl dd.xing {
           color: #888888;
-          font-size: 1rem; }
+          font-size: 1.6rem; }
       .appoin-section ul > li .right .tip {
         padding-bottom: 0.5rem; }
         .appoin-section ul > li .right .tip li {
-          margin: 0.5rem 0.2rem 0 0;
-          display: inline-block; }
+          margin: 0.5rem 0.5rem 0 0;
+          display: inline-block;
+          background: #ffb1c5;
+          padding: 0.3rem;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -mz-border-radius: 4px;
+          -o-border-radius: 4px;
+          border-radius: 4px; }
           .appoin-section ul > li .right .tip li a {
-            background: #ffb1c5;
-            padding: 2px 2px;
             color: #ffffff;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            -mz-border-radius: 4px;
-            -o-border-radius: 4px;
-            border-radius: 4px;
-            font-size: 1rem; }
+            display: inline-block;
+            font-size: 1.2rem; }
 
 .appoin-search {
   width: 100%;
@@ -410,17 +430,21 @@ body, html {
       padding: 6px 12px;
       width: 80%;
       height: 3.5rem;
+      line-height: 3rem;
       display: inline-block;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: normal;
       vertical-align: middle;
-      margin-right: -4px; }
+      margin-right: -4px;
+      -webkit-appearance: none;
+      outline: none;
+      border-radius: 0; }
     .appoin-search form.search .form-group button {
       width: 20%;
       border: #eee solid 1px;
       background: #fff;
       vertical-align: middle;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       display: inline-block;
       height: 3.5rem; }
 
@@ -428,12 +452,12 @@ body, html {
 .appoinList-nav ul.ul {
   background: #ffffff;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   position: relative; }
   .appoinList-nav ul.ul > li {
     display: inline-block;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.6rem;
     width: 20%;
     float: left;
     color: #888888;
@@ -441,7 +465,7 @@ body, html {
     .appoinList-nav ul.ul > li:last-child {
       border: none; }
     .appoinList-nav ul.ul > li i {
-      font-size: 0.8rem; }
+      font-size: 1.6rem; }
     .appoinList-nav ul.ul > li > ol {
       display: none;
       position: absolute;
@@ -451,10 +475,10 @@ body, html {
       left: 0;
       text-align: left; }
       .appoinList-nav ul.ul > li > ol li {
-        padding: 0.8rem 1rem;
+        padding: 1rem 1rem;
         border-bottom: #eee solid 1px; }
         .appoinList-nav ul.ul > li > ol li a {
-          font-size: 1rem;
+          font-size: 1.4rem;
           color: #585858; }
 
 /* 上面是列表页 */
@@ -465,11 +489,11 @@ body, html {
   .appoin-article .left {
     width: 40%;
     text-align: center;
-    margin: 0.8rem 0 1rem 0.4rem;
+    margin: 1rem 1rem 2rem 1rem;
     display: inline-block;
     position: relative;
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -mz-border-radius: 100%;
@@ -496,18 +520,18 @@ body, html {
     margin: 2rem 0 0 0.6rem; }
     .appoin-article .right .number {
       color: #1b5d9b;
-      font-size: 1rem; }
+      font-size: 1.4rem; }
     .appoin-article .right h3 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: #585858;
       font-weight: normal;
       margin: 1rem 0 1rem 0; }
       .appoin-article .right h3 span {
         color: #888888;
-        font-size: 1rem;
+        font-size: 1.4rem;
         padding-left: 1rem; }
     .appoin-article .right dl dt {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: #f27200; }
 
 .appoinArt-con {
@@ -518,33 +542,36 @@ body, html {
     width: 100%;
     text-align: center;
     color: #555555;
-    font-size: 1.4rem;
-    font-weight: normal; }
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem; }
   .appoinArt-con section {
     margin: 2rem 0; }
   .appoinArt-con section.one .tip {
     padding: 0 1rem; }
     .appoinArt-con section.one .tip li {
-      margin: 1rem 0.4rem 0 0;
-      display: inline-block; }
+      margin: 0 0.5rem 1rem 0;
+      display: inline-block;
+      background: #ffb1c5;
+      padding: 0.3rem;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -mz-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px; }
       .appoinArt-con section.one .tip li a {
-        background: #ffb1c5;
-        padding: 3px 5px;
         color: #ffffff;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -mz-border-radius: 4px;
-        -o-border-radius: 4px;
-        border-radius: 4px;
-        font-size: 1rem; }
+        display: inline-block;
+        font-size: 1.2rem; }
   .appoinArt-con section.two {
     padding: 0 1rem; }
     .appoinArt-con section.two .tj {
-      margin-bottom: 1rem; }
+      margin-bottom: 1.5rem; }
     .appoinArt-con section.two p {
       color: #888888;
-      font-size: 1.2rem;
-      line-height: 1.3; }
+      font-size: 1.4rem;
+      line-height: 1.6;
+      letter-spacing: 0.1rem; }
   .appoinArt-con section.three {
     padding: 0 1rem; }
     .appoinArt-con section.three .tj {
@@ -557,29 +584,44 @@ body, html {
       .appoinArt-con section.three ul li:last-child {
         margin-right: 0; }
 
-.appoin-article-f .public-sub, .appoin-article-f .baby-reser-section form .wai .submit, .baby-reser-section form .wai .appoin-article-f .submit, .appoin-article-f .apply .wai .submit, .apply .wai .appoin-article-f .submit {
-  width: 48%; }
-  .appoin-article-f .public-sub:first-child, .appoin-article-f .baby-reser-section form .wai .submit:first-child, .baby-reser-section form .wai .appoin-article-f .submit:first-child, .appoin-article-f .apply .wai .submit:first-child, .apply .wai .appoin-article-f .submit:first-child {
-    margin-right: 2%; }
+.appoin-article-f {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+  .appoin-article-f .public-sub-radius {
+    width: 48%;
+    display: inline-block;
+    font-size: 1.6rem;
+    background: #f27200;
+    border: none;
+    color: #ffffff;
+    line-height: 4rem;
+    height: 4rem; }
+    .appoin-article-f .public-sub-radius:first-child {
+      margin-right: 2%; }
 
 /* // 上面是保姆预约详情页 */
 .appoin-order-top {
   margin: 1rem 0.5rem;
   padding: 1.5rem 1rem;
-  background: #fff; }
+  background: #fff;
+  border: #eee solid 1px; }
   .appoin-order-top .dl-inline {
     width: 100%;
     padding: 0 0 1rem 0; }
     .appoin-order-top .dl-inline dt {
-      width: 6rem;
+      width: 30%;
       color: #585858;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       letter-spacing: 0.1rem; }
     .appoin-order-top .dl-inline dd {
-      font-size: 1rem;
-      color: #888888; }
+      font-size: 1.4rem;
+      color: #888888;
+      padding-left: 2rem; }
       .appoin-order-top .dl-inline dd.cof27 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 600; }
 
 .appoin-form .form-group {
@@ -592,14 +634,17 @@ body, html {
       float: right; }
   .appoin-form .form-group .input {
     width: 100%;
-    height: 2.4rem;
-    padding: 1.6rem 0.5rem 1.4rem 0.5rem; }
+    height: 3.5rem;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    padding: 6px 12px; }
 .appoin-form .public-h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #585858;
   font-weight: normal;
-  padding: 0.5rem; }
+  padding: 1rem; }
 .appoin-form .pay-label {
+  font-size: 1.4rem;
   width: 100%;
   display: block;
   background: #ffffff;
@@ -632,7 +677,7 @@ body, html {
   .appoin-form .pay-label .text {
     color: #8b8b8b;
     width: 70%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: inline-block; }
 .appoin-form .pay {
   font-size: 1.4rem;
@@ -643,9 +688,15 @@ body, html {
   background: #f27200;
   border: none;
   width: 100%;
-  padding: 1rem 0;
-  font-size: 1.4rem;
-  color: #ffffff; }
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  text-align: center; }
 
 /* 上面是保姆预约界面 */
 .baby-partList-nav ul.ul {
@@ -656,14 +707,15 @@ body, html {
   .baby-partList-nav ul.ul > li {
     display: inline-block;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.6rem;
     width: 25%;
     float: left;
-    border-right: #ccc solid 1px; }
+    border-right: #ccc solid 1px;
+    color: #888888; }
     .baby-partList-nav ul.ul > li:last-child {
       border: none; }
     .baby-partList-nav ul.ul > li i {
-      font-size: 0.8rem; }
+      font-size: 1.6rem; }
     .baby-partList-nav ul.ul > li > ol {
       display: none;
       position: absolute;
@@ -673,10 +725,10 @@ body, html {
       left: 0;
       text-align: left; }
       .baby-partList-nav ul.ul > li > ol li {
-        padding: 0.8rem 1rem;
+        padding: 1rem 1rem;
         border-bottom: #eee solid 1px; }
         .baby-partList-nav ul.ul > li > ol li a {
-          font-size: 1rem;
+          font-size: 1.4rem;
           color: #585858; }
 
 .baby-article-head {
@@ -716,7 +768,7 @@ body, html {
       margin-right: 0.2rem; }
   .baby-article-section h2 {
     color: #585858;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: normal;
     padding: 0.5rem 1rem;
     border-bottom: #d8d8da solid 1px; }
@@ -728,10 +780,12 @@ body, html {
       height: 2rem;
       width: 80%;
       color: #888888;
-      font-size: 1rem; }
+      font-size: 1.4rem; }
       .baby-article-section .tel .left i {
         font-size: 1.4rem;
-        margin-right: 0.3rem; }
+        margin-right: 0.3rem;
+        width: 1.6rem;
+        display: inline-block; }
     .baby-article-section .tel .right {
       height: 2rem;
       width: 20%;
@@ -749,9 +803,11 @@ body, html {
     color: #888888; }
     .baby-article-addr .left i {
       font-size: 1.4rem;
-      margin-right: 0.3rem; }
+      margin-right: 0.3rem;
+      width: 1.2rem;
+      display: inline-block; }
     .baby-article-addr .left .calendars {
-      font-size: 1rem;
+      font-size: 1.4rem;
       border: none;
       color: #585858; }
   .baby-article-addr .right {
@@ -766,26 +822,28 @@ body, html {
   border-top: #eee solid 1px;
   border-bottom: #eee solid 1px; }
   .baby-article-reser ul li {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border-bottom: #d8d8da solid 1px; }
     .baby-article-reser ul li .left {
       width: 50%; }
       .baby-article-reser ul li .left h3 {
-        font-size: 1rem;
+        font-size: 1.6rem;
         color: #585858;
         padding-bottom: 0.3rem;
         font-weight: normal; }
       .baby-article-reser ul li .left span {
         color: #f27200;
-        font-size: 1rem; }
+        font-size: 1.6rem; }
     .baby-article-reser ul li .right {
       width: 50%;
       text-align: right; }
       .baby-article-reser ul li .right a {
+        text-align: center;
         display: inline-block;
         color: #ffffff;
-        padding: 0.5rem 1rem;
-        background: #f27200; }
+        padding: 0.5rem 2rem;
+        background: #f27200;
+        font-size: 1.4rem; }
 
 .baby-article-watch {
   color: #585858;
@@ -795,9 +853,10 @@ body, html {
   background: #fff;
   border-top: #eee solid 1px;
   border-bottom: #eee solid 1px;
-  padding: 1rem; }
+  padding: 1.5rem 1rem; }
   .baby-article-watch span {
-    width: 85%;
+    font-size: 1.6rem;
+    width: 90%;
     display: inline-block; }
   .baby-article-watch i {
     font-size: 1.6rem; }
@@ -855,18 +914,19 @@ body, html {
     padding: 0 0 0.5rem 0; }
     .baby-menu ul h3 {
       background: #f7f5ec;
-      padding: 0.5rem 0;
+      padding: 1rem 0;
       text-align: center;
       color: #585858;
       margin-bottom: 0.5rem;
-      font-size: 1rem; }
+      font-size: 1.6rem; }
     .baby-menu ul li div {
       color: #585858;
       font-size: 0.8rem;
       float: left;
       width: 33.333%;
       text-align: center;
-      padding: 0.5rem 0; }
+      padding: 1rem 0;
+      font-size: 1.4rem; }
 
 .baby-reser-section {
   background: #ffffff;
@@ -880,20 +940,28 @@ body, html {
       color: #888888;
       display: inline-block;
       vertical-align: middle;
-      height: 2rem;
-      line-height: 2.3rem; }
+      height: 2.4rem;
+      line-height: 3rem;
+      font-size: 1.4rem; }
     .baby-reser-section form .form-group .inline {
       vertical-align: middle;
       display: inline-block;
       width: 70%;
       padding: 0.5rem;
+      font-size: 1.4rem;
+      height: 2.4rem;
+      padding: 1.6rem 0.5rem 1.4rem;
       outline: none;
       border: none;
       color: #585858;
       border: #dcdcdc solid 1px; }
+      .baby-reser-section form .form-group .inline.pano {
+        padding: 0 12px;
+        height: 3rem; }
   .baby-reser-section form .wai {
     padding-top: 1rem; }
     .baby-reser-section form .wai .submit {
+      height: 4.2rem;
       position: absolute;
       bottom: 0;
       left: 0; }
@@ -914,7 +982,7 @@ body, html {
       padding: 1rem 0;
       display: inline-block;
       color: #585858;
-      font-size: 1rem; }
+      font-size: 1.6rem; }
 
 .baby-pics ul {
   margin: 0 3%; }
@@ -930,13 +998,16 @@ body, html {
 .apply .form-group {
   margin: 0 3%; }
   .apply .form-group .label {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #585858;
     padding: 0.5rem;
     display: block; }
   .apply .form-group .inp, .apply .form-group .select {
     width: 100%;
-    padding: 0.8rem 0.5rem;
+    height: 3.5rem;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    padding: 6px 12px;
     outline: none;
     border: none;
     color: #585858;
@@ -952,17 +1023,19 @@ body, html {
   margin-top: 1rem; }
   .apply .tip .left {
     text-align: center;
-    width: 20%; }
+    width: 20%;
+    font-size: 1.4rem; }
   .apply .tip .right {
-    line-height: 1.2rem;
-    font-size: 1rem;
+    line-height: 1.6rem;
+    font-size: 1.4rem;
     width: 80%; }
 .apply .wai {
   padding-top: 1rem; }
   .apply .wai .submit {
     position: absolute;
     bottom: 0;
-    left: 0; }
+    left: 0;
+    height: 4.2rem; }
 
 /* 上面是apply页面 */
 .offline-list-top {
@@ -1032,19 +1105,24 @@ body, html {
       border-bottom: #f27200 solid 2px;
       color: #f27200; }
     .other-top li a {
-      width: 80%;
+      width: 90%;
       padding: 1rem 0;
       display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap;
       color: #585858;
-      font-size: 1rem; }
+      font-size: 1.6rem; }
 
 .apd-data {
   background: #ffffff;
   border: #d9d9d9 solid 1px;
-  padding: 1rem 0.5rem;
+  padding: 0 0.5rem 1rem;
   margin-top: 1rem; }
   .apd-data .apd-top {
-    padding: 0.5rem 0; }
+    font-size: 1.6rem;
+    padding: 1.5rem 0; }
     .apd-data .apd-top .left, .apd-data .apd-top .center, .apd-data .apd-top .right {
       display: inline-block;
       width: 10%;
@@ -1057,24 +1135,24 @@ body, html {
     background: #f5f5f5; }
     .apd-data .apd-xingqi ul li {
       border: #e2e2e2 solid 1px;
+      font-size: 1.4rem;
       color: #979797;
-      font-size: 1rem;
       width: 14.285%;
       text-align: center;
-      padding: 0.5rem 0;
+      padding: 1rem 0;
       cursor: pointer;
       min-height: 2rem; }
   .apd-data .apd-md ul li {
     border: #e2e2e2 solid 1px;
     color: #979797;
     background: #f5f5f5;
-    font-size: 1rem;
+    font-size: 1.4rem;
     width: 14.285%;
     text-align: right;
     cursor: pointer;
-    height: 2.5rem;
+    height: 4rem;
     padding: 0 1rem;
-    line-height: 2.5rem; }
+    line-height: 4rem; }
     .apd-data .apd-md ul li.disable {
       color: #b5b5b5;
       background: #fefefe; }

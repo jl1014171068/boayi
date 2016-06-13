@@ -12,46 +12,23 @@
 <meta name="format-detection" content="telephone=no" />
 <!-- 关闭号码识别 -->
 <title>保姆预约--线下门店</title>
-<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
-<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=99b83791f7a104893a0ccd9770f8696d"></script> 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
+	<style>
+		.zoom-handler{
+            display:none;
+        }
+        body,html{
+            width:100%;
+            height:100%;
+            padding-bottom:0;
+        }
+	</style>
 </head>
 
-<style>
-  #container {
-    width:100%; height: 100%; 
-  }  
-</style>
-<body class="bgf8 aono">
- <div id="container"></div>  
-   
-  <script src="js/zepto.js"></script>
-  <script src="js/script.js"></script>
-  <script>
-    var map = new AMap.Map('container',{
-        zoom: 13,
-        center: [121.522839,31.264383],
-    });
-      var marker = new AMap.Marker({
-        position: [121.522839,31.264383],
-        map:map
-    });
-    marker.setMap(map);
-    AMap.plugin('AMap.AdvancedInfoWindow',function(){
-  var infowindow = new AMap.AdvancedInfoWindow({
-    content: '<h3 class="title">上海市家政</h1>'+
-             '<div class="content">高德是中国领先的数字地图内容、'+
-             '导航和位置服务解决方案提供商。</div>',
-   offset: new AMap.Pixel(0, -30),
-    asOrigin:false
-  });
-  infowindow.open(map,new AMap.LngLat(121.522839,31.264383));
-})
-  </script>
+<body>
+	<iframe src="http://m.amap.com/navi/?start=''&dest=121.522839,31.264383&destName=上海徐汇门店&key=99b83791f7a104893a0ccd9770f8696d" id='getmap' frameborder="0" height='100%' width="100%"></iframe>
+<script src="js/zepto.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
